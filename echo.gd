@@ -1,0 +1,1 @@
+class_name Echo extends CharacterBody3D
