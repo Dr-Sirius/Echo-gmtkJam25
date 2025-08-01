@@ -6,58 +6,38 @@ extends Node3D
 var isRecording: bool = false
 
 
-var echoes: Array[EchoRecording]
-
-var current_echo: EchoRecording
-
+var current_echo: EchoData
 
 func _physics_process(delta: float) -> void:
-	record()
-
-func record():
 	
 	if !isRecording:
 		if Input.is_action_just_pressed("record"):
-			print("record")
-			isRecording = !isRecording
-			var new_echo = Echo_file.instantiate()
-			var new_echo_rec: EchoRecording = EchoRecording.new(player.global_position,new_echo)
-			current_echo = new_echo_rec
+			print("start record")
+			var new_echo_data = EchoData.new()
+			new_echo_data.pos.append(player.global_position)
+			new_echo_data.rot.append(player.global_rotation)
+			new_echo_data.velocity.append(player.velocity)
+			current_echo = new_echo_data
 			
-			echoes.append(new_echo_rec)
+			isRecording = true
+		
+			
 	else:
-		print(current_echo.positions)
 		if Input.is_action_just_pressed("record"):
 			print("stop record")
-			isRecording = !isRecording
-			add_child(current_echo.echo)
-			current_echo.LoopPos()
-		else: 
-			current_echo.AddPos(player.global_position)
-
-class EchoRecording extends Node:
-	var positions: Array[Vector3]
-	var echo: Echo
-	var timer: Timer
-	
-	func _init(pos: Vector3,echo: Echo) -> void:
-		self.positions = [pos]
-		self.echo = echo
-		self.timer = Timer.new()
-		get_tree().current_scene.add_child(timer)
-		
-		
-
-	func AddPos(pos: Vector3) -> void:
-		self.positions.append(pos)
-	
-	func SetPos(pos: Vector3) -> void:
-		self.echo.global_position = pos
-	
-	func LoopPos() -> void:
-		for p in positions:
-			self.SetPos(p)
-			self.timer.start(1)
-			await self.timer.timeout
+			isRecording = false
+			var new_echo = Echo_file.instantiate()
 			
-		
+			new_echo.echo_data = current_echo
+			add_child(new_echo)
+			new_echo.global_position = current_echo.pos[0]
+			current_echo = null
+		else:
+			
+			current_echo.pos.append(player.global_position)
+			current_echo.rot.append(player.global_rotation)
+			current_echo.velocity.append(player.velocity)
+
+
+
+	

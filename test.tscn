@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://bl8g76fg8yr3q"]
+[gd_scene load_steps=13 format=3 uid="uid://bl8g76fg8yr3q"]
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://PlayerEchoManager.gd" id="1_ehkex"]
 [ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="4_00tp4"]
 [ext_resource type="Material" uid="uid://cg0b401okvr4w" path="res://addons/kenney_prototype_tools/materials/light/material_08.tres" id="5_77dp3"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="6_5tkv4"]
+[ext_resource type="Script" uid="uid://ds1xkmbtgrjrq" path="res://test_plat.gd" id="6_xersf"]
 [ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="7_0m0f1"]
 [ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/player.tscn" id="7_vbegm"]
 [ext_resource type="Material" uid="uid://d0hicg0fjb7jg" path="res://addons/kenney_prototype_tools/materials/green/material_08.tres" id="8_b0q6j"]
@@ -70,10 +71,11 @@ use_collision = true
 size = Vector3(10.4, 1.99182, 3.51826)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 2.2, 11.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, -7.8, 11.2)
 material_override = ExtResource("7_0m0f1")
 use_collision = true
 size = Vector3(4.4, 4.8, 2.8)
+script = ExtResource("6_xersf")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.8, 0.9, 11.2)

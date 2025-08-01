@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsqmxgnc0pqbk"]
+[gd_scene load_steps=6 format=3 uid="uid://dsqmxgnc0pqbk"]
 
 [ext_resource type="Script" uid="uid://vyaq42x2tmna" path="res://echo.gd" id="1_yymxn"]
 
@@ -10,6 +10,8 @@ material = SubResource("StandardMaterial3D_yymxn")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yymxn"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_3llff"]
+
 [node name="Echo" type="CharacterBody3D"]
 script = ExtResource("1_yymxn")
 
@@ -18,3 +20,7 @@ mesh = SubResource("CapsuleMesh_3llff")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_yymxn")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.73196e-08, 0, 0.115, 0, 0.095, 0, -0.625, 0, -5.02681e-09, 0, 1.2, -0.45)
+mesh = SubResource("BoxMesh_3llff")
