@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var Echo_file = preload("res://echo.tscn")
 
+@export var timer: Timer
 @export var player: CharacterBody3D
 var isRecording: bool = false
 
@@ -11,7 +12,7 @@ var current_echo: EchoData
 func _physics_process(delta: float) -> void:
 	
 	if !isRecording:
-		if Input.is_action_just_pressed("record"):
+		if !timer.is_stopped():
 			print("start record")
 			var new_echo_data = EchoData.new()
 			new_echo_data.pos.append(player.global_position)
@@ -23,12 +24,13 @@ func _physics_process(delta: float) -> void:
 		
 			
 	else:
-		if Input.is_action_just_pressed("record"):
+		if timer.is_stopped():
 			print("stop record")
 			isRecording = false
 			var new_echo = Echo_file.instantiate()
 			
 			new_echo.echo_data = current_echo
+			new_echo.timer = timer
 			add_child(new_echo)
 			new_echo.global_position = current_echo.pos[0]
 			current_echo = null
