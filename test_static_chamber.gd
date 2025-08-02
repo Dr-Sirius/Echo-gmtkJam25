@@ -8,7 +8,7 @@ extends Node3D
 var player_left: bool = false
 func _physics_process(delta: float) -> void:
 	if timer.is_stopped() and player_left:
-		$StaticBody3D/CollisionShape3D.disabled = true
+		$StaticBody3D/CollisionShape3D.set_deferred("disabled",true)
 		player.global_position.x = global_position.x
 		player.global_position.z = global_position.z
 		player.global_position.y = global_position.y + 1
@@ -18,6 +18,6 @@ func _physics_process(delta: float) -> void:
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name.to_lower() == "player":
 		player_left = true
-		$StaticBody3D/CollisionShape3D.disabled = false
+		$StaticBody3D/CollisionShape3D.set_deferred("disabled",false)
 		timer.start()
 		
