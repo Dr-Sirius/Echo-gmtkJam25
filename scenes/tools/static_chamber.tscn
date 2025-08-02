@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=4 uid="uid://b857t6xjf54qe"]
+
+[ext_resource type="Script" uid="uid://1ilq7xv23g66" path="res://scripts/test_static_chamber.gd" id="1_egcw6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0m0f1"]
+size = Vector3(7.0641, 6.42282, 6.29361)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77dp3"]
+size = Vector3(5.7948, 8.8103, 5.30086)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_00tp4"]
+data = PackedVector3Array(-3.11838, -0.056885, 2.68018, -3.11838, -0.056885, -2.68018, -3.11838, 0.056885, -2.68018, 3.11838, -0.056885, -2.68018, -3.11838, -0.056885, -2.68018, -3.11838, -0.056885, 2.68018, -3.11838, 0.056885, -2.68018, -3.11838, -0.056885, -2.68018, 3.11838, -0.056885, -2.68018, -3.11838, 0.056885, -2.68018, -3.11838, 0.056885, 2.68018, -3.11838, -0.056885, 2.68018, -3.11838, -0.056885, 2.68018, -3.11838, 0.056885, 2.68018, 3.11838, 0.056885, 2.68018, 3.11838, 0.056885, 2.68018, -3.11838, 0.056885, 2.68018, -3.11838, 0.056885, -2.68018, -3.11838, -0.056885, 2.68018, 3.11838, -0.056885, 2.68018, 3.11838, -0.056885, -2.68018, 3.11838, 0.056885, 2.68018, 3.11838, -0.056885, 2.68018, -3.11838, -0.056885, 2.68018, 3.11838, -0.056885, -2.68018, 3.11838, -0.056885, 2.68018, 3.11838, 0.056885, 2.68018, 3.11838, -0.056885, -2.68018, 3.11838, 0.056885, -2.68018, -3.11838, 0.056885, -2.68018, -3.11838, 0.056885, -2.68018, 3.11838, 0.056885, -2.68018, 3.11838, 0.056885, 2.68018, 3.11838, 0.056885, 2.68018, 3.11838, 0.056885, -2.68018, 3.11838, -0.056885, -2.68018)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_77dp3"]
+_surfaces = [{
+"aabb": AABB(-3.11838, -0.056885, -2.68018, 6.23676, 0.11377, 5.36035),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("ipNHwD8Aab39hytAipNHwD8Aab39hyvAipNHwD8AaT39hyvAipNHQD8Aab39hyvAipNHwD8Aab39hyvAipNHwD8Aab39hytAipNHwD8AaT39hyvAipNHwD8Aab39hyvAipNHQD8Aab39hyvAipNHwD8AaT39hyvAipNHwD8AaT39hytAipNHwD8Aab39hytAipNHwD8Aab39hytAipNHwD8AaT39hytAipNHQD8AaT39hytAipNHQD8AaT39hytAipNHwD8AaT39hytAipNHwD8AaT39hyvAipNHwD8Aab39hytAipNHQD8Aab39hytAipNHQD8Aab39hyvAipNHQD8AaT39hytAipNHQD8Aab39hytAipNHwD8Aab39hytAipNHQD8Aab39hyvAipNHQD8Aab39hytAipNHQD8AaT39hytAipNHQD8Aab39hyvAipNHQD8AaT39hyvAipNHwD8AaT39hyvAipNHwD8AaT39hyvAipNHQD8AaT39hyvAipNHQD8AaT39hytAipNHQD8AaT39hytAipNHQD8AaT39hyvAipNHQD8Aab39hyvAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[node name="Static Chamber" type="StaticBody3D" node_paths=PackedStringArray("timer", "player")]
+script = ExtResource("1_egcw6")
+timer = NodePath("")
+player = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0811994, 0.945038, -0.00198936)
+shape = SubResource("BoxShape3D_0m0f1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218811, 0, -0.0195999)
+shape = SubResource("BoxShape3D_77dp3")
+disabled = true
+debug_color = Color(0.97349, 0.153187, 0.139579, 0.42)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_00tp4")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_77dp3")
+skeleton = NodePath("../..")
+
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
