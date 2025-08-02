@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var Echo_file = preload("res://echo.tscn")
+@onready var Echo_file = preload("res://scenes/Entities/echo.tscn")
 
 @export var timer: Timer
 @export var player: CharacterBody3D

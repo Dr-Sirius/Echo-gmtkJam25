@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bftda3ajcxew5"]
+
+[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/PlayerEchoManager.gd" id="1_kq20n"]
+[ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_qnu5e"]
+[ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="3_reqkv"]
+
+[node name="lvl_1_tutorial" type="Node3D" node_paths=PackedStringArray("timer", "player")]
+script = ExtResource("1_kq20n")
+timer = NodePath("Timer")
+player = NodePath("Player")
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068778, -0.524548, -5.95332)
+size = Vector3(6.83887, 1, 25.9536)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Player" parent="." instance=ExtResource("3_reqkv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166676, 1.19091, 4.22865)
+
+[node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("2_qnu5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119781, 0.0497384, 4.16087)
+timer = NodePath("../Timer")
+player = NodePath("../Player")
+
+[editable path="Static Chamber"]
