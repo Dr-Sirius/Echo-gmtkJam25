@@ -15,4 +15,4 @@ func settings_press():
 	settings_panel.visible = !settings_panel.visible
 
 func play_press():
-	LevelLoader.change_level(false,1)
+	LevelLoader.start()

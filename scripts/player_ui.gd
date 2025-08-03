@@ -21,11 +21,12 @@ func _ready() -> void:
 	pemanager = get_tree().current_scene
 	
 	Resume.pressed.connect(resume)
+	Save.pressed.connect(save)
 	Settings.pressed.connect(settings_show)
 	Quit.pressed.connect(get_tree().quit)
 
 func _unhandled_input(event: InputEvent) -> void:
-	print(Input.mouse_mode == Input.MOUSE_MODE_CAPTURED)
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 		
 		if paused: 
@@ -62,3 +63,16 @@ func settings_show():
 	else:
 		settings_vis = true
 		settings_panel.show()
+
+func save():
+	
+	var save_data: Dictionary = {
+		"level": LevelLoader.current_level
+	}
+	var save_file = FileAccess.open("user://savegame.save", FileAccess.WRITE)
+
+	# JSON provides a static method to serialized JSON string.
+	var json_string = JSON.stringify(save_data)
+
+	# Store the save dictionary as a new line in the save file.
+	save_file.store_line(json_string)

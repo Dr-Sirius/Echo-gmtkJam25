@@ -22,6 +22,7 @@ func change_level(next:bool,  level_id: int):
 		
 		get_tree().change_scene_to_packed(levels[current_level])
 	elif !next:
+		current_level = level_id
 		get_tree().change_scene_to_packed(levels[level_id])
 
 # pulled from https://www.reddit.com/r/godot/comments/k1t53k/getting_tscn_children_from_levels_folder/
@@ -52,3 +53,40 @@ func get_file_paths_by_extension(dir_path: String, extension: String, recursive:
 		file_name = dir.get_next()
 		
 	return file_paths
+
+func start():
+	print("load")
+	var save = load_game()
+	print(save)
+	if !save.is_empty():
+		print("loading level")
+		change_level(false,save["level"])
+	else:
+		change_level(false,1)
+	
+func load_game() -> Dictionary:
+	if not FileAccess.file_exists("user://savegame.save"):
+		return {}
+	
+
+	# Load the file line by line and process that dictionary to restore
+	# the object it represents.
+	var save_file = FileAccess.open("user://savegame.save", FileAccess.READ)
+	while save_file.get_position() < save_file.get_length():
+		var json_string = save_file.get_line()
+
+		# Creates the helper class to interact with JSON.
+		var json = JSON.new()
+	
+		# Check if there is any error while parsing the JSON string, skip in case of failure.
+		var parse_result = json.parse(json_string)
+		if not parse_result == OK:
+			print("JSON Parse Error: ", json.get_error_message(), " in ", json_string, " at line ", json.get_error_line())
+			continue
+		
+		return json.data
+	return {}
+		
+		
+
+		
