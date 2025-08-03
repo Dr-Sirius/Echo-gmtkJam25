@@ -14,7 +14,7 @@ func _ready() -> void:
 	button.connect("released",on_entity_signal_false)
 
 func _process(delta: float) -> void:
-	print(disabled)
+	
 	if disabled:
 		light.light_color = Color(0.881, 0.0, 0.249)
 	else:

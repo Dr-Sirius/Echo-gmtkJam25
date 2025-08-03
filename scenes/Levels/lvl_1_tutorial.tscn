@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bftda3ajcxew5"]
+[gd_scene load_steps=18 format=3 uid="uid://bftda3ajcxew5"]
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/PlayerEchoManager.gd" id="1_kq20n"]
 [ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_qnu5e"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="3_ug0lm"]
 [ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="4_bs833"]
 [ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="5_0lm05"]
+[ext_resource type="Script" uid="uid://cs7wv6qnliq8t" path="res://scenes/Levels/wall_door_big.gd" id="5_bs833"]
 [ext_resource type="Script" uid="uid://c3db8dnsmeh3s" path="res://scenes/Levels/wall_sensor_orange.gd" id="5_ug0lm"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="6_q0yii"]
 [ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scenes/Levels/floor_button_red.gd" id="7_sjugx"]
@@ -27,11 +28,11 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs833"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_hbp13"]
-height = 0.223145
-radius = 0.321777
+height = 0.504639
+radius = 0.382324
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5tkp7"]
-size = Vector3(1.89844, 1.26672, 1.64038)
+size = Vector3(2.02344, 1.26672, 1.84375)
 
 [node name="lvl_1_tutorial" type="Node3D" node_paths=PackedStringArray("timer", "player")]
 script = ExtResource("1_kq20n")
@@ -77,14 +78,17 @@ operation = 2
 size = Vector3(2.73633, 2.4491, 1)
 metadata/_edit_lock_ = true
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068778, 2.13736, -25.4455)
+[node name="wall_door_big" type="CSGBox3D" parent="Geometry" node_paths=PackedStringArray("sensor", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.069, 2, -25.446)
 material_override = ExtResource("4_bs833")
 use_collision = true
 size = Vector3(3.29517, 2.68945, 0.0996094)
+script = ExtResource("5_bs833")
+sensor = NodePath("../wall_sensor_orange")
+timer = NodePath("../../Timer")
 
 [node name="wall_sensor_orange" type="CSGCylinder3D" parent="Geometry" node_paths=PackedStringArray("light", "button")]
-transform = Transform3D(1, 0, 0, 0, -0.0213438, -0.999772, 0, 0.999772, -0.0213438, 2.25975, 1.66742, -25.121)
+transform = Transform3D(1, 0, 0, 0, -0.0213438, -0.999772, 0, 0.999772, -0.0213438, 2.25975, 2.3571, -25.121)
 material_override = ExtResource("4_bs833")
 use_collision = true
 radius = 0.242188
@@ -97,7 +101,7 @@ button = NodePath("../floor_button_red")
 [node name="Area3D" type="Area3D" parent="Geometry/wall_sensor_orange"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/wall_sensor_orange/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.082777, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22353, 4.76837e-07)
 shape = SubResource("CylinderShape3D_hbp13")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Geometry/wall_sensor_orange"]
@@ -135,6 +139,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166676, 1.19091, 4.22865)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119781, 0.0497384, 4.16087)
 timer = NodePath("../Timer")
 player = NodePath("../Player")
+
+[node name="CollisionShape3D" parent="Static Chamber/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0811994, 0.945038, -0.3822)
+
+[node name="CollisionShape3D" parent="Static Chamber/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218811, 0, 0.138149)
 
 [node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
 material_override = ExtResource("5_0lm05")
