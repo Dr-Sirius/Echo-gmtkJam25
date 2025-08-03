@@ -3,15 +3,16 @@ extends Node
 
 var levels: Array[PackedScene]
 
-var current_level: int = 1
+var current_level: int = 0
 
 signal level_change(next_in_line:bool,level_index:int)
 
-func _ready() -> void:
+func _init() -> void:
+
 	level_change.connect(change_level)
 	levels = get_file_paths_by_extension("res://scenes/Levels/","tscn")
 	for i in levels:
-		print(i.resource_path)
+		print(i.resource_path, "path")
 
 
 func change_level(next:bool,  level_id: int):
@@ -46,9 +47,15 @@ func get_file_paths_by_extension(dir_path: String, extension: String, recursive:
 				file_paths += get_file_paths_by_extension(current_dir_path,extension,recursive)
 		
 		else:
-			if file_name.get_extension() == extension:
+			
+			if file_name.get_extension().contains(extension):
 				var file_path = dir.get_current_dir() + "/" + file_name
 				file_paths.append(load(file_path))
+			elif file_name.get_extension().contains("remap"):
+				file_name = file_name.replace('.remap', '') 
+				var file_path = dir.get_current_dir() + "/" + file_name
+				file_paths.append(load(file_path))
+				
 		
 		file_name = dir.get_next()
 		
@@ -62,7 +69,7 @@ func start():
 		print("loading level")
 		change_level(false,save["level"])
 	else:
-		change_level(false,1)
+		change_level(false,0)
 	
 func load_game() -> Dictionary:
 	if not FileAccess.file_exists("user://savegame.save"):
