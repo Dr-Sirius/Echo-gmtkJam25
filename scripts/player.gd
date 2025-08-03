@@ -182,5 +182,6 @@ func interact_with_rigidbody():
 		var collider_normal := get_slide_collision(i).get_normal()
 		if collider is RigidBody3D:
 			collider.apply_central_impulse(-collider_normal * push_force)
+		
 			
 			

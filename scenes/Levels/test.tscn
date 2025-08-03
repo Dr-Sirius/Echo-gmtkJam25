@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://bl8g76fg8yr3q"]
 
-[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/PlayerEchoManager.gd" id="1_4xlv1"]
+[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_4xlv1"]
 [ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_v051k"]
 [ext_resource type="Material" uid="uid://cg0b401okvr4w" path="res://addons/kenney_prototype_tools/materials/light/material_08.tres" id="3_im44o"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="4_dcklv"]

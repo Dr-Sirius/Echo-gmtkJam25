@@ -4,8 +4,10 @@ extends Node3D
 
 @export var timer: Timer
 @export var player: CharacterBody3D
-var isRecording: bool = false
+@export var loop_max: int = 3
 
+var isRecording: bool = false
+var loop_count: int = 0
 
 var current_echo: EchoData
 
@@ -25,6 +27,9 @@ func _physics_process(delta: float) -> void:
 			
 	else:
 		if timer.is_stopped():
+			loop_count += 1
+			if loop_count >= loop_max and LevelLoader:
+				get_tree().reload_current_scene()
 			print("stop record")
 			isRecording = false
 			var new_echo = Echo_file.instantiate()
@@ -34,7 +39,9 @@ func _physics_process(delta: float) -> void:
 			add_child(new_echo)
 			new_echo.global_position = current_echo.pos[0]
 			current_echo = null
-		else:
+			
+			
+		elif !timer.is_stopped() and current_echo != null:
 			
 			current_echo.pos.append(player.global_position)
 			current_echo.rot.append(player.global_rotation)

@@ -11,13 +11,13 @@ func _ready() -> void:
 		isReplaying = true
 
 func _physics_process(delta: float) -> void:
-	
+	print(isReplaying)
 	if !timer.is_stopped():
 		
 		visible = true
 		get_child(1).disabled = false
-		if isReplaying:
-			replay_echo()
+		
+		replay_echo()
 		move_and_slide()
 	else:
 		global_position = echo_data.pos[0]
@@ -29,12 +29,14 @@ func _physics_process(delta: float) -> void:
 		
 func replay_echo():
 	if echo_data.iteration == len(echo_data.pos):
+		print("end replay")
 		echo_data.iteration = 0
 		isReplaying = false
 		velocity = Vector3.ZERO
 		return
-	global_position = echo_data.pos[echo_data.iteration]
-	global_rotation = echo_data.rot[echo_data.iteration]
+		
+	position = echo_data.pos[echo_data.iteration]
+	rotation = echo_data.rot[echo_data.iteration]
 	velocity = echo_data.velocity[echo_data.iteration]
 	echo_data.iteration += 1
 	return

@@ -1,20 +1,14 @@
-extends CSGBox3D
+class_name WallEnity extends Entity
 
-
-
-@export var button: Node3D
-@export var sensor: Node3D
+@export var entity: Entity
 @export var timer: Timer
 @export var up_y: float = 3.0
 var default_y: float = position.y
 
 func _ready() -> void:
-	if button != null:
-		button.connect("pressed",on_entity_signal_true)
-		button.connect("released",on_entity_signal_false)
-	if sensor != null:
-		sensor.connect("disrupted",on_entity_signal_true)
-		sensor.connect("clear",on_entity_signal_false)
+	if entity != null:
+		entity.connected.connect(on_entity_signal_true)
+		entity.disconnected.connect(on_entity_signal_false)
 		
 	timer.timeout.connect(reset)
 	
@@ -27,4 +21,4 @@ func on_entity_signal_true():
 	tween.tween_property(self,"position",pos,0.4)
 	
 func on_entity_signal_false():
-	position.y -= up_y
+	position.y = default_y

@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://b7566n70tdjea"]
+
+[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_3xi4u"]
+[ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_epk12"]
+[ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_l5wbu"]
+[ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="3_epk12"]
+[ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="4_be1rn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xi4u"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_l5wbu"]
+sky_material = SubResource("ProceduralSkyMaterial_3xi4u")
+
+[sub_resource type="Environment" id="Environment_epk12"]
+background_mode = 2
+sky = SubResource("Sky_l5wbu")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Lvl2NextStep" type="Node3D" node_paths=PackedStringArray("timer", "player")]
+script = ExtResource("1_3xi4u")
+timer = NodePath("Timer")
+player = NodePath("Player")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_epk12")
+
+[node name="Geometry" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.241699, -5.93723)
+material_override = ExtResource("2_epk12")
+use_collision = true
+size = Vector3(3.3125, 0.516602, 17.5268)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.291856, -19.3008)
+material_override = ExtResource("2_epk12")
+use_collision = true
+size = Vector3(3.34937, 1.31589, 9.33063)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71582, -30.421)
+material_override = ExtResource("2_epk12")
+use_collision = true
+size = Vector3(3.40649, 4.16382, 13.8528)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92521, -48.1414)
+material_override = ExtResource("2_epk12")
+use_collision = true
+size = Vector3(3.36035, 4.07715, 22.1768)
+
+[node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("2_l5wbu")]
+timer = NodePath("../Timer")
+player = NodePath("../Player")
+
+[node name="CSGBakedCollisionShape3D" parent="Static Chamber" index="2"]
+transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
+transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("4_be1rn")
+
+[node name="Player" parent="." instance=ExtResource("3_epk12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34268, 0.113878)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[editable path="Static Chamber"]
