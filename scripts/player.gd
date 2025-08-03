@@ -44,8 +44,9 @@ var sprint_speed: float = 9:
 			sprint_speed = n
 			
 var current_speed: float = base_speed
+
 func _ready():
-	
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	is_captured = true
 	base_speed = speed
 	jump_velocity = jump_height
@@ -56,14 +57,10 @@ func _ready():
 	
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and isCaptured:
-		isCaptured = false
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	elif event.is_action_pressed("ui_cancel") and !isCaptured:
-		isCaptured = true
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
-	if event is InputEventMouseMotion and isCaptured:
+	
+	
+	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(-event.relative.x * cam_sens))
 		camera.rotate_x(deg_to_rad(-event.relative.y * cam_sens))
 		camera.rotation.x = clamp(camera.rotation.x,deg_to_rad(-60),deg_to_rad(60))
