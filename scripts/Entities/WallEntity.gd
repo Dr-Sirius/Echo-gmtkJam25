@@ -19,6 +19,8 @@ func on_entity_signal_true():
 	var tween = get_tree().create_tween()
 	var pos = Vector3(position.x,position.y + up_y,position.z)
 	tween.tween_property(self,"position",pos,0.4)
+	connected.emit()
 	
 func on_entity_signal_false():
 	position.y = default_y
+	disconnected.emit()

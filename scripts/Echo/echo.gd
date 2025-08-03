@@ -11,7 +11,7 @@ func _ready() -> void:
 		isReplaying = true
 
 func _physics_process(delta: float) -> void:
-	print(isReplaying)
+	
 	if !timer.is_stopped():
 		
 		visible = true

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ntiu66svity3" path="res://addons/kenney_prototype_tools/textures/red/texture_01.png" id="1_1w4lu"]
 
 [resource]
+resource_local_to_scene = true
 vertex_color_is_srgb = true
 albedo_texture = ExtResource("1_1w4lu")
 uv1_triplanar = true

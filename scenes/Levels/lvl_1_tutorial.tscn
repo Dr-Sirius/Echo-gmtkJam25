@@ -91,7 +91,7 @@ script = ExtResource("5_bs833")
 entity = NodePath("../wall_sensor_orange")
 timer = NodePath("../../Timer")
 
-[node name="wall_sensor_orange" type="CSGCylinder3D" parent="Geometry" node_paths=PackedStringArray("light", "entity")]
+[node name="wall_sensor_orange" type="CSGCylinder3D" parent="Geometry" node_paths=PackedStringArray("light", "area", "entity")]
 transform = Transform3D(1, 0, 0, 0, -0.0213438, -0.999772, 0, 0.999772, -0.0213438, 2.25975, 2.3571, -25.121)
 material_override = ExtResource("4_bs833")
 use_collision = true
@@ -100,6 +100,7 @@ height = 0.109497
 material = SubResource("StandardMaterial3D_bs833")
 script = ExtResource("5_ug0lm")
 light = NodePath("OmniLight3D")
+area = NodePath("Area3D")
 entity = NodePath("../floor_button_red")
 
 [node name="Area3D" type="Area3D" parent="Geometry/wall_sensor_orange"]
@@ -162,8 +163,6 @@ script = ExtResource("12_0lm05")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.10614)
 shape = SubResource("BoxShape3D_bs833")
 
-[connection signal="body_entered" from="Geometry/wall_sensor_orange/Area3D" to="Geometry/wall_sensor_orange" method="_on_area_3d_body_entered"]
-[connection signal="body_exited" from="Geometry/wall_sensor_orange/Area3D" to="Geometry/wall_sensor_orange" method="_on_area_3d_body_exited"]
 [connection signal="body_entered" from="Geometry/floor_button_red/Area3D" to="Geometry/floor_button_red" method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Geometry/floor_button_red/Area3D" to="Geometry/floor_button_red" method="_on_area_3d_body_exited"]
 

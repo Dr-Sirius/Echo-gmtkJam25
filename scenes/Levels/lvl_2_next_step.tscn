@@ -1,10 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://b7566n70tdjea"]
+[gd_scene load_steps=17 format=3 uid="uid://b7566n70tdjea"]
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_3xi4u"]
 [ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_epk12"]
 [ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_l5wbu"]
+[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="3_3t3qm"]
 [ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="3_epk12"]
+[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/level_end.gd" id="3_xch5h"]
 [ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="4_be1rn"]
+[ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="4_npgfc"]
+[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="5_yj7mw"]
+[ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="6_xch5h"]
+[ext_resource type="Script" uid="uid://cs7wv6qnliq8t" path="res://scripts/Entities/WallEntity.gd" id="7_yg42c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xi4u"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -18,6 +24,12 @@ background_mode = 2
 sky = SubResource("Sky_l5wbu")
 tonemap_mode = 2
 glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yg42c"]
+size = Vector3(3.94727, 4.5332, 5.67716)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_twbyr"]
+size = Vector3(0.862305, 0.37915, 0.75)
 
 [node name="Lvl2NextStep" type="Node3D" node_paths=PackedStringArray("timer", "player")]
 script = ExtResource("1_3xi4u")
@@ -51,11 +63,50 @@ material_override = ExtResource("2_epk12")
 use_collision = true
 size = Vector3(3.40649, 4.16382, 13.8528)
 
+[node name="Level End" type="Area3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241876, 7.1365, -50.2748)
+script = ExtResource("3_xch5h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/Level End"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98123, -2.09218)
+shape = SubResource("BoxShape3D_yg42c")
+
 [node name="CSGBox3D4" type="CSGBox3D" parent="Geometry"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92521, -48.1414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92521, -46.0509)
 material_override = ExtResource("2_epk12")
 use_collision = true
-size = Vector3(3.36035, 4.07715, 22.1768)
+size = Vector3(3.36035, 4.07715, 17.9956)
+
+[node name="floor_button_red" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.79934, -36.6612)
+material_override = ExtResource("3_3t3qm")
+size = Vector3(1.04321, 0.233643, 0.928711)
+script = ExtResource("4_npgfc")
+
+[node name="Area3D" type="Area3D" parent="Geometry/floor_button_red"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/floor_button_red/Area3D"]
+shape = SubResource("BoxShape3D_twbyr")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.06699, -47.7993)
+material_override = ExtResource("5_yj7mw")
+use_collision = true
+size = Vector3(6.00562, 13.3845, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Geometry/CSGBox3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47277, 0)
+operation = 2
+size = Vector3(2.04004, 3.5752, 1.67871)
+
+[node name="wall_door_big" type="CSGBox3D" parent="Geometry" node_paths=PackedStringArray("entity", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.64957, -47.7993)
+material_override = ExtResource("6_xch5h")
+use_collision = true
+size = Vector3(2.04004, 3.7948, 0.286865)
+script = ExtResource("7_yg42c")
+entity = NodePath("../floor_button_red")
+timer = NodePath("../../Timer")
 
 [node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("2_l5wbu")]
 timer = NodePath("../Timer")
@@ -74,5 +125,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34268, 0.113878)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[connection signal="body_entered" from="Geometry/floor_button_red/Area3D" to="Geometry/floor_button_red" method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Geometry/floor_button_red/Area3D" to="Geometry/floor_button_red" method="_on_area_3d_body_exited"]
 
 [editable path="Static Chamber"]

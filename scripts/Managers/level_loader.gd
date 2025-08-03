@@ -10,12 +10,13 @@ signal level_change(next_in_line:bool,level_index:int)
 func _ready() -> void:
 	level_change.connect(change_level)
 	levels = get_file_paths_by_extension("res://scenes/Levels/","tscn")
-	print(levels[0].resource_path)
+	for i in levels:
+		print(i.resource_path)
 
 
 func change_level(next:bool,  level_id: int):
 	print("changing")
-	get_tree().unload_current_scene()
+	
 	if next and current_level < len(levels):
 		current_level += 1
 		
