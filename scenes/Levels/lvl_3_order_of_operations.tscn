@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_f5kyq"]
 [ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_wn53v"]
-[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/level_end.gd" id="3_6qpj8"]
+[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/Managers/level_end.gd" id="3_6qpj8"]
 [ext_resource type="Script" uid="uid://c3db8dnsmeh3s" path="res://scripts/Entities/SensorEntity.gd" id="3_fp2qk"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="4_jpurj"]
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="6_ppxp8"]

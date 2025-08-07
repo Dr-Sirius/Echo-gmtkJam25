@@ -51,10 +51,7 @@ func _ready():
 	base_speed = speed
 	jump_velocity = jump_height
 	velocity.y = 0
-	
-	
-
-	
+	camera.fov = Config.config_file.get_value("VideoSettings","Fov")
 	
 func _unhandled_input(event: InputEvent) -> void:
 	
@@ -66,14 +63,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x,deg_to_rad(-60),deg_to_rad(60))
 		
 func _process(delta: float) -> void:
-	pass
-		
-	#test code
-	#if ray.is_colliding() and Input.is_action_just_pressed("record"):
-		#var myMesh = MeshInstance3D.new()
-		#myMesh.mesh = BoxMesh.new()
-		#myMesh.global_position = ray.get_collision_point()
-		#get_tree().current_scene.add_child(myMesh)
+	camera.fov = int(Config.config_file.get_value("VideoSettings","Fov"))
 		
 		
 	

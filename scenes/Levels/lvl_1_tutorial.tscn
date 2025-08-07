@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://c3db8dnsmeh3s" path="res://scripts/Entities/SensorEntity.gd" id="5_ug0lm"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="6_q0yii"]
 [ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="7_sjugx"]
-[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/level_end.gd" id="12_0lm05"]
+[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/Managers/level_end.gd" id="12_0lm05"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n3fk8"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)

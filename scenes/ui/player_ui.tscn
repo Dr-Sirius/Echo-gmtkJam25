@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://s0axh3ym3udl"]
 
-[ext_resource type="Script" uid="uid://i0i188k101x5" path="res://scripts/player_ui.gd" id="1_jg20v"]
+[ext_resource type="Script" uid="uid://i0i188k101x5" path="res://scripts/UI/player_ui.gd" id="1_jg20v"]
 [ext_resource type="Theme" uid="uid://cbvpnvswnhikr" path="res://assets/styles/main_theme.tres" id="2_fatqr"]
 [ext_resource type="FontFile" uid="uid://dpvufh58kvadh" path="res://assets/fonts/loaded.ttf" id="3_1afs1"]
-[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="4_fatqr"]
+[ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="4_fatqr"]
 
 [sub_resource type="FontVariation" id="FontVariation_pc08v"]
 base_font = ExtResource("3_1afs1")
@@ -11,7 +11,7 @@ base_font = ExtResource("3_1afs1")
 [sub_resource type="LabelSettings" id="LabelSettings_tybkg"]
 font = SubResource("FontVariation_pc08v")
 
-[node name="Player UI" type="Control" node_paths=PackedStringArray("timer_info", "loop_info", "settings_panel", "Pause_Menu", "Resume", "Settings", "Save", "Quit")]
+[node name="Player UI" type="Control" node_paths=PackedStringArray("timer_info", "loop_info", "Pause_Menu", "Resume", "Settings", "Save", "Quit", "options_menu")]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -23,12 +23,12 @@ mouse_filter = 2
 script = ExtResource("1_jg20v")
 timer_info = NodePath("Timer Info/Timer")
 loop_info = NodePath("Loop Info/Loop Number")
-settings_panel = NodePath("Pause Menu/Settings2")
 Pause_Menu = NodePath("Pause Menu")
 Resume = NodePath("Pause Menu/Resume")
 Settings = NodePath("Pause Menu/Settings")
 Save = NodePath("Pause Menu/Save")
 Quit = NodePath("Pause Menu/Quit")
+options_menu = NodePath("Pause Menu/MasterOptionsMenu")
 
 [node name="Timer Info" type="Control" parent="."]
 layout_mode = 1
@@ -125,8 +125,6 @@ theme = ExtResource("2_fatqr")
 theme_override_font_sizes/font_size = 26
 text = "Quit"
 
-[node name="Settings2" parent="Pause Menu" node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("4_fatqr")]
+[node name="MasterOptionsMenu" parent="Pause Menu" instance=ExtResource("4_fatqr")]
 visible = false
 layout_mode = 1
-mouse_filter = 2
-MenuPanelRef = NodePath("../..")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://bm7l3m2qbllbf"]
 
-[ext_resource type="Script" uid="uid://bb2jctd7a7x6m" path="res://scripts/main_menu.gd" id="1_1g8jr"]
+[ext_resource type="Script" uid="uid://bb2jctd7a7x6m" path="res://scripts/UI/main_menu.gd" id="1_1g8jr"]
 [ext_resource type="Theme" uid="uid://cbvpnvswnhikr" path="res://assets/styles/main_theme.tres" id="2_m1kxf"]
 [ext_resource type="Shader" uid="uid://cskmusjgmaho0" path="res://scenes/ui/main_menu.gdshader" id="2_x2yvf"]
-[ext_resource type="PackedScene" uid="uid://px6a2dg8cawb" path="res://addons/modular-settings-menu/scenes/settings.tscn" id="3_x2yvf"]
+[ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="4_m1kxf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uhagc"]
 shader = ExtResource("2_x2yvf")
@@ -16,7 +16,7 @@ shader_parameter/scale = Vector2(2, 16)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhagc"]
 
-[node name="Main Menu" type="Control" node_paths=PackedStringArray("settings_btn", "settings_panel", "play_btn", "quit_btn")]
+[node name="Main Menu" type="Control" node_paths=PackedStringArray("settings_btn", "option_menu", "play_btn", "quit_btn")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_1g8jr")
 settings_btn = NodePath("Settings_btn")
-settings_panel = NodePath("Settings")
+option_menu = NodePath("MasterOptionsMenu")
 play_btn = NodePath("Play_btn")
 quit_btn = NodePath("Quit")
 
@@ -109,8 +109,6 @@ theme_override_font_sizes/font_size = 40
 text = "Quit
 "
 
-[node name="Settings" parent="." node_paths=PackedStringArray("MenuPanelRef") instance=ExtResource("3_x2yvf")]
+[node name="MasterOptionsMenu" parent="." instance=ExtResource("4_m1kxf")]
 visible = false
 layout_mode = 1
-IS_IN_GAME_MENU = false
-MenuPanelRef = NodePath("..")

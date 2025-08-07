@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_l5wbu"]
 [ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="3_3t3qm"]
 [ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="3_epk12"]
-[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/level_end.gd" id="3_xch5h"]
+[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/Managers/level_end.gd" id="3_xch5h"]
 [ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="4_be1rn"]
 [ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="4_npgfc"]
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="5_yj7mw"]
