@@ -6,9 +6,10 @@
 
 
 ### Fixed 
-
-#### - Fixed Keyboard input settings
-    Controls setting would not properly display and set default keybinds. 
-    
+ - Fixed Keyboard input settings not registering
+    - see [changed](#changed)
 
 ### Changed
+- Changed Settings menu addon
+    - previously was Modular Settings Menu by [MarkVelez](https://github.com/MarkVelez/godot-modular-settings-menu)
+    - Now using Godot Options Menus by [maaack](https://github.com/Maaack/Godot-Options-Menus)
