@@ -1,0 +1,115 @@
+[gd_scene load_steps=38 format=3 uid="uid://u8wys2huctn3"]
+
+[ext_resource type="PackedScene" uid="uid://862cfoqoef31" path="res://scenes/Scifikit/Platforms/Door_DarkMetal.fbx" id="1_dw2wg"]
+[ext_resource type="PackedScene" uid="uid://crsndhdpmnd8r" path="res://scenes/Scifikit/Platforms/Door_Frame_A.fbx" id="2_b35rj"]
+[ext_resource type="PackedScene" uid="uid://bvuw1twy4f01b" path="res://scenes/Scifikit/Platforms/Door_Frame_Square.fbx" id="3_15yk8"]
+[ext_resource type="PackedScene" uid="uid://72ks4lri8h0u" path="res://scenes/Scifikit/Platforms/Door_Frame_SquareTall.fbx" id="4_pfkpx"]
+[ext_resource type="PackedScene" uid="uid://1no4ldovgw4w" path="res://scenes/Scifikit/Platforms/Door_Frame_Square_Blocked.fbx" id="5_bjer4"]
+[ext_resource type="PackedScene" uid="uid://dvi00us2uxf7j" path="res://scenes/Scifikit/Platforms/Door_Simple.fbx" id="6_flpqy"]
+[ext_resource type="PackedScene" uid="uid://bjiunxwf0pj1x" path="res://scenes/Scifikit/Platforms/Platform_3Plates.fbx" id="7_xmdwq"]
+[ext_resource type="PackedScene" uid="uid://d1rt37d662dop" path="res://scenes/Scifikit/Platforms/Platform_CenterPlate.fbx" id="8_iwdod"]
+[ext_resource type="PackedScene" uid="uid://d22p5lw6whudo" path="res://scenes/Scifikit/Platforms/Platform_CenterPlate_Curve.fbx" id="9_wckvu"]
+[ext_resource type="PackedScene" uid="uid://b2m7wu17ge1a4" path="res://scenes/Scifikit/Platforms/Platform_DarkPlates.fbx" id="10_8k54k"]
+[ext_resource type="PackedScene" uid="uid://c5oae5wjos0qt" path="res://scenes/Scifikit/Platforms/Platform_DarkPlates_Curves.fbx" id="11_xhdsn"]
+[ext_resource type="PackedScene" uid="uid://cthbomqg4d7i4" path="res://scenes/Scifikit/Platforms/Platform_Metal2.fbx" id="12_nwrtb"]
+[ext_resource type="PackedScene" uid="uid://bojkhw8i57g3l" path="res://scenes/Scifikit/Platforms/Platform_Metal2_Curve.fbx" id="13_0inrb"]
+[ext_resource type="PackedScene" uid="uid://cadui6hypxa5e" path="res://scenes/Scifikit/Platforms/Platform_Metal.fbx" id="14_xi1h4"]
+[ext_resource type="PackedScene" uid="uid://f8bpqh4qs21g" path="res://scenes/Scifikit/Platforms/Platform_Metal_Curve.fbx" id="15_1g6ap"]
+[ext_resource type="PackedScene" uid="uid://4x2yk2fwjf1" path="res://scenes/Scifikit/Platforms/Platform_Rails_2.fbx" id="16_d3qfo"]
+[ext_resource type="PackedScene" uid="uid://co2la2ri0gilp" path="res://scenes/Scifikit/Platforms/Platform_Rails_4.fbx" id="17_0pkdj"]
+[ext_resource type="PackedScene" uid="uid://uqcvtwtev5kf" path="res://scenes/Scifikit/Platforms/Platform_Rails_4Wide.fbx" id="18_jdqcs"]
+[ext_resource type="PackedScene" uid="uid://b4esdmajbhaxo" path="res://scenes/Scifikit/Platforms/Platform_Rails_4WideTall.fbx" id="19_k0c7j"]
+[ext_resource type="PackedScene" uid="uid://bo4el1n21wq0g" path="res://scenes/Scifikit/Platforms/Platform_Ramp_2.fbx" id="20_gigku"]
+[ext_resource type="PackedScene" uid="uid://br6w26hgtpuyi" path="res://scenes/Scifikit/Platforms/Platform_Ramp_2Short.fbx" id="21_g6vh8"]
+[ext_resource type="PackedScene" uid="uid://cwxpcytvs0pxk" path="res://scenes/Scifikit/Platforms/Platform_Ramp_4.fbx" id="22_2vk1t"]
+[ext_resource type="PackedScene" uid="uid://bmbstixcfpqeu" path="res://scenes/Scifikit/Platforms/Platform_Ramp_4Wide.fbx" id="23_i6uv6"]
+[ext_resource type="PackedScene" uid="uid://bax3b1c5ytmaa" path="res://scenes/Scifikit/Platforms/Platform_Round1.fbx" id="24_y2ejh"]
+[ext_resource type="PackedScene" uid="uid://1cv4u7sljyfp" path="res://scenes/Scifikit/Platforms/Platform_Simple2.fbx" id="25_7e8yo"]
+[ext_resource type="PackedScene" uid="uid://syxiqffn5tiq" path="res://scenes/Scifikit/Platforms/Platform_Simple2_Curve.fbx" id="26_l2uil"]
+[ext_resource type="PackedScene" uid="uid://brefd1yfajy2a" path="res://scenes/Scifikit/Platforms/Platform_Simple.fbx" id="27_jxt62"]
+[ext_resource type="PackedScene" uid="uid://dutk3mjja85un" path="res://scenes/Scifikit/Platforms/Platform_Simple_Curve.fbx" id="28_reg54"]
+[ext_resource type="PackedScene" uid="uid://cc62ut5h41jgb" path="res://scenes/Scifikit/Platforms/Platform_Squares.fbx" id="29_kcskx"]
+[ext_resource type="PackedScene" uid="uid://bf1q4i1f02fqv" path="res://scenes/Scifikit/Platforms/Platform_Squares_Curve.fbx" id="30_nte8d"]
+[ext_resource type="PackedScene" uid="uid://cv0takggjhanv" path="res://scenes/Scifikit/Platforms/Platform_Stairs_2.fbx" id="31_q6auh"]
+[ext_resource type="PackedScene" uid="uid://c4jlmebrl4qpm" path="res://scenes/Scifikit/Platforms/Platform_Stairs_4.fbx" id="32_dapsy"]
+[ext_resource type="PackedScene" uid="uid://cpb68rm5r20er" path="res://scenes/Scifikit/Platforms/Platform_Stairs_4Wide.fbx" id="33_bjald"]
+[ext_resource type="PackedScene" uid="uid://c55fwtsp7fxfv" path="res://scenes/Scifikit/Platforms/Platform_Stairs_4WideTall.fbx" id="34_njmr5"]
+[ext_resource type="PackedScene" uid="uid://d1aopr28qmf0q" path="res://scenes/Scifikit/Platforms/Platform_Window_Thin.fbx" id="35_tthrb"]
+[ext_resource type="PackedScene" uid="uid://dvqj51faqq8mj" path="res://scenes/Scifikit/Platforms/Platform_Window_Wide.fbx" id="36_kl2of"]
+[ext_resource type="PackedScene" uid="uid://dw3llatnjxj7n" path="res://scenes/Scifikit/Platforms/Platform_X.fbx" id="37_l7lil"]
+
+[node name="Platforms" type="Node3D"]
+
+[node name="Door_DarkMetal" parent="." instance=ExtResource("1_dw2wg")]
+
+[node name="Door_Frame_A" parent="." instance=ExtResource("2_b35rj")]
+
+[node name="Door_Frame_Square" parent="." instance=ExtResource("3_15yk8")]
+
+[node name="Door_Frame_SquareTall" parent="." instance=ExtResource("4_pfkpx")]
+
+[node name="Door_Frame_Square_Blocked" parent="." instance=ExtResource("5_bjer4")]
+
+[node name="Door_Simple" parent="." instance=ExtResource("6_flpqy")]
+
+[node name="Platform_3Plates" parent="." instance=ExtResource("7_xmdwq")]
+
+[node name="Platform_CenterPlate" parent="." instance=ExtResource("8_iwdod")]
+
+[node name="Platform_CenterPlate_Curve" parent="." instance=ExtResource("9_wckvu")]
+
+[node name="Platform_DarkPlates" parent="." instance=ExtResource("10_8k54k")]
+
+[node name="Platform_DarkPlates_Curves" parent="." instance=ExtResource("11_xhdsn")]
+
+[node name="Platform_Metal2" parent="." instance=ExtResource("12_nwrtb")]
+
+[node name="Platform_Metal2_Curve" parent="." instance=ExtResource("13_0inrb")]
+
+[node name="Platform_Metal" parent="." instance=ExtResource("14_xi1h4")]
+
+[node name="Platform_Metal_Curve" parent="." instance=ExtResource("15_1g6ap")]
+
+[node name="Platform_Rails_2" parent="." instance=ExtResource("16_d3qfo")]
+
+[node name="Platform_Rails_4" parent="." instance=ExtResource("17_0pkdj")]
+
+[node name="Platform_Rails_4Wide" parent="." instance=ExtResource("18_jdqcs")]
+
+[node name="Platform_Rails_4WideTall" parent="." instance=ExtResource("19_k0c7j")]
+
+[node name="Platform_Ramp_2" parent="." instance=ExtResource("20_gigku")]
+
+[node name="Platform_Ramp_2Short" parent="." instance=ExtResource("21_g6vh8")]
+
+[node name="Platform_Ramp_4" parent="." instance=ExtResource("22_2vk1t")]
+
+[node name="Platform_Ramp_4Wide" parent="." instance=ExtResource("23_i6uv6")]
+
+[node name="Platform_Round1" parent="." instance=ExtResource("24_y2ejh")]
+
+[node name="Platform_Simple2" parent="." instance=ExtResource("25_7e8yo")]
+
+[node name="Platform_Simple2_Curve" parent="." instance=ExtResource("26_l2uil")]
+
+[node name="Platform_Simple" parent="." instance=ExtResource("27_jxt62")]
+
+[node name="Platform_Simple_Curve" parent="." instance=ExtResource("28_reg54")]
+
+[node name="Platform_Squares" parent="." instance=ExtResource("29_kcskx")]
+
+[node name="Platform_Squares_Curve" parent="." instance=ExtResource("30_nte8d")]
+
+[node name="Platform_Stairs_2" parent="." instance=ExtResource("31_q6auh")]
+
+[node name="Platform_Stairs_4" parent="." instance=ExtResource("32_dapsy")]
+
+[node name="Platform_Stairs_4Wide" parent="." instance=ExtResource("33_bjald")]
+
+[node name="Platform_Stairs_4WideTall" parent="." instance=ExtResource("34_njmr5")]
+
+[node name="Platform_Window_Thin" parent="." instance=ExtResource("35_tthrb")]
+
+[node name="Platform_Window_Wide" parent="." instance=ExtResource("36_kl2of")]
+
+[node name="Platform_X" parent="." instance=ExtResource("37_l7lil")]

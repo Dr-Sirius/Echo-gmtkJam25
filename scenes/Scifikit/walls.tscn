@@ -1,0 +1,256 @@
+[gd_scene load_steps=85 format=3 uid="uid://bnd3d2n0vttwy"]
+
+[ext_resource type="PackedScene" uid="uid://wt8si4mryvgr" path="res://scenes/Scifikit/Walls/BottomMetal_Corner_Round_Inner.fbx" id="1_k1fpm"]
+[ext_resource type="PackedScene" uid="uid://dilw325js3nh4" path="res://scenes/Scifikit/Walls/BottomMetal_Corner_Round_Outer.fbx" id="2_q7hoo"]
+[ext_resource type="PackedScene" uid="uid://bjqvy4crydu8k" path="res://scenes/Scifikit/Walls/BottomMetal_Corner_Square_Inner.fbx" id="3_d700o"]
+[ext_resource type="PackedScene" uid="uid://bmt47sad631ej" path="res://scenes/Scifikit/Walls/BottomMetal_Corner_Square_Outer_1.fbx" id="4_5jbar"]
+[ext_resource type="PackedScene" uid="uid://dqi60twpxk8wi" path="res://scenes/Scifikit/Walls/BottomMetal_Corner_Square_Outer_2.fbx" id="5_6lunf"]
+[ext_resource type="PackedScene" uid="uid://bhas1ji61u3fp" path="res://scenes/Scifikit/Walls/BottomMetal_Straight.fbx" id="6_w8sov"]
+[ext_resource type="PackedScene" uid="uid://cm5kc3wrpookd" path="res://scenes/Scifikit/Walls/BottomSimple_Corner_Round_Inner.fbx" id="7_cv3m1"]
+[ext_resource type="PackedScene" uid="uid://ckf53qm7tr8xd" path="res://scenes/Scifikit/Walls/BottomSimple_Corner_Round_Outer.fbx" id="8_7a6ub"]
+[ext_resource type="PackedScene" uid="uid://rijoqs8lmjpi" path="res://scenes/Scifikit/Walls/BottomSimple_Corner_Square_Inner.fbx" id="9_yljq2"]
+[ext_resource type="PackedScene" uid="uid://cs0absaoro7ds" path="res://scenes/Scifikit/Walls/BottomSimple_Corner_Square_Outer_1.fbx" id="10_8677c"]
+[ext_resource type="PackedScene" uid="uid://dbs4fjp1rl1g0" path="res://scenes/Scifikit/Walls/BottomSimple_Corner_Square_Outer_2.fbx" id="11_2vg2a"]
+[ext_resource type="PackedScene" uid="uid://cao6bvlg4v254" path="res://scenes/Scifikit/Walls/BottomSimple_Straight.fbx" id="12_qhrv1"]
+[ext_resource type="PackedScene" uid="uid://dviufi1xw7xrh" path="res://scenes/Scifikit/Walls/ShortWall_AccentStrip_Corner_Inner.fbx" id="13_lgvib"]
+[ext_resource type="PackedScene" uid="uid://btlmul447c24x" path="res://scenes/Scifikit/Walls/ShortWall_AccentStrip_Corner_Outer.fbx" id="14_rhbab"]
+[ext_resource type="PackedScene" uid="uid://blkilu3355a8k" path="res://scenes/Scifikit/Walls/ShortWall_AccentStrip_Straight.fbx" id="15_mk25t"]
+[ext_resource type="PackedScene" uid="uid://c2yxecgk1fg65" path="res://scenes/Scifikit/Walls/ShortWall_Band2_Corner_Inner.fbx" id="16_lkavq"]
+[ext_resource type="PackedScene" uid="uid://qdg3kkl2in3r" path="res://scenes/Scifikit/Walls/ShortWall_Band2_Corner_Outer.fbx" id="17_p1s1r"]
+[ext_resource type="PackedScene" uid="uid://hi1vow0gb6ng" path="res://scenes/Scifikit/Walls/ShortWall_Band2_Straight.fbx" id="18_hvd1p"]
+[ext_resource type="PackedScene" uid="uid://b07efas5wqf1l" path="res://scenes/Scifikit/Walls/ShortWall_DarkMetal2_Corner_Inner.fbx" id="19_m1rrk"]
+[ext_resource type="PackedScene" uid="uid://bmbu8qxtlbq3d" path="res://scenes/Scifikit/Walls/ShortWall_DarkMetal2_Corner_Outer.fbx" id="20_u1q2l"]
+[ext_resource type="PackedScene" uid="uid://dxqacqtvht6od" path="res://scenes/Scifikit/Walls/ShortWall_DarkMetal2_Straight.fbx" id="21_y577m"]
+[ext_resource type="PackedScene" uid="uid://c3x4mocce532w" path="res://scenes/Scifikit/Walls/ShortWall_DarkPlastic_Corner_Inner.fbx" id="22_4vyw6"]
+[ext_resource type="PackedScene" uid="uid://6hi202ryogum" path="res://scenes/Scifikit/Walls/ShortWall_DarkPlastic_Corner_Outer.fbx" id="23_fdcqx"]
+[ext_resource type="PackedScene" uid="uid://buvs2xrjnoy24" path="res://scenes/Scifikit/Walls/ShortWall_DarkPlastic_Straight.fbx" id="24_3i8wl"]
+[ext_resource type="PackedScene" uid="uid://7jssgdwtk7pw" path="res://scenes/Scifikit/Walls/ShortWall_Metal2_Corner_Inner.fbx" id="25_liogj"]
+[ext_resource type="PackedScene" uid="uid://dc6wm2jbelwqs" path="res://scenes/Scifikit/Walls/ShortWall_Metal2_Corner_Outer.fbx" id="26_tj63s"]
+[ext_resource type="PackedScene" uid="uid://eenxfi6355eo" path="res://scenes/Scifikit/Walls/ShortWall_Metal2_Straight.fbx" id="27_0po3e"]
+[ext_resource type="PackedScene" uid="uid://bwu74ppsfpnli" path="res://scenes/Scifikit/Walls/ShortWall_MetalPlates_Corner_Inner.fbx" id="28_oyrnp"]
+[ext_resource type="PackedScene" uid="uid://dhadkygfwl0bj" path="res://scenes/Scifikit/Walls/ShortWall_MetalPlates_Corner_Outer.fbx" id="29_nxoy8"]
+[ext_resource type="PackedScene" uid="uid://ddxqmvr0idyug" path="res://scenes/Scifikit/Walls/ShortWall_MetalPlates_Straight.fbx" id="30_u7ypd"]
+[ext_resource type="PackedScene" uid="uid://ccx813hc0a25y" path="res://scenes/Scifikit/Walls/ShortWall_Simple1_Corner_Inner.fbx" id="31_cvbm1"]
+[ext_resource type="PackedScene" uid="uid://br3b1xdya1wc1" path="res://scenes/Scifikit/Walls/ShortWall_Simple1_Corner_Outer.fbx" id="32_hlchl"]
+[ext_resource type="PackedScene" uid="uid://r60rf6yh3qrl" path="res://scenes/Scifikit/Walls/ShortWall_Simple1_Straight.fbx" id="33_ws2qo"]
+[ext_resource type="PackedScene" uid="uid://cbies3unw50mv" path="res://scenes/Scifikit/Walls/ShortWall_Simple2_Corner_Inner.fbx" id="34_qyx8q"]
+[ext_resource type="PackedScene" uid="uid://dcjfw87b0x046" path="res://scenes/Scifikit/Walls/ShortWall_Simple2_Corner_Outer.fbx" id="35_7ut18"]
+[ext_resource type="PackedScene" uid="uid://b8k67defduil3" path="res://scenes/Scifikit/Walls/ShortWall_Simple2_Straight.fbx" id="36_0yifx"]
+[ext_resource type="PackedScene" uid="uid://rrsn2jo4v42q" path="res://scenes/Scifikit/Walls/ShortWall_Triangles_Corner_Inner.fbx" id="37_m2nn3"]
+[ext_resource type="PackedScene" uid="uid://b11lj3y1hqyav" path="res://scenes/Scifikit/Walls/ShortWall_Triangles_Corner_Outer.fbx" id="38_7u6or"]
+[ext_resource type="PackedScene" uid="uid://cls38y63a664m" path="res://scenes/Scifikit/Walls/ShortWall_Triangles_Straight.fbx" id="39_1sh46"]
+[ext_resource type="PackedScene" uid="uid://bmf22iqb17u40" path="res://scenes/Scifikit/Walls/ShortWall_WhitePlate2_Corner_Inner.fbx" id="40_gof2x"]
+[ext_resource type="PackedScene" uid="uid://c03xhv7ytmtia" path="res://scenes/Scifikit/Walls/ShortWall_WhitePlate2_Corner_Outer.fbx" id="41_0g65k"]
+[ext_resource type="PackedScene" uid="uid://dvvcsj05lsb8y" path="res://scenes/Scifikit/Walls/ShortWall_WhitePlate2_Straight.fbx" id="42_16mry"]
+[ext_resource type="PackedScene" uid="uid://dqu2m2podynh4" path="res://scenes/Scifikit/Walls/TopAstra_Corner_Round_Inner.fbx" id="43_lk7ae"]
+[ext_resource type="PackedScene" uid="uid://bn6g5u46xlgb6" path="res://scenes/Scifikit/Walls/TopAstra_Curve_Round_Outer.fbx" id="44_7ubwg"]
+[ext_resource type="PackedScene" uid="uid://b7mrg2nbkgd4y" path="res://scenes/Scifikit/Walls/TopAstra_Straight.fbx" id="45_2b2d3"]
+[ext_resource type="PackedScene" uid="uid://gqkieuswjasw" path="res://scenes/Scifikit/Walls/TopCables_Corner_Round_Inner.fbx" id="46_s0ten"]
+[ext_resource type="PackedScene" uid="uid://bkwy4n6561bil" path="res://scenes/Scifikit/Walls/TopCables_Corner_Round_Outer.fbx" id="47_07p8s"]
+[ext_resource type="PackedScene" uid="uid://drmytrl1lyw68" path="res://scenes/Scifikit/Walls/TopCables_Corner_Square_Inner.fbx" id="48_wohdh"]
+[ext_resource type="PackedScene" uid="uid://rbgciatels23" path="res://scenes/Scifikit/Walls/TopCables_Corner_Square_Outer.fbx" id="49_gn87w"]
+[ext_resource type="PackedScene" uid="uid://7e1gtd2p603n" path="res://scenes/Scifikit/Walls/TopCables_Straight.fbx" id="50_mwnwj"]
+[ext_resource type="PackedScene" uid="uid://lvm6dwkdbwrb" path="res://scenes/Scifikit/Walls/TopCables_Straight_Hanging.fbx" id="51_jcl7m"]
+[ext_resource type="PackedScene" uid="uid://bjcwsvr6q33iu" path="res://scenes/Scifikit/Walls/TopPlastic_Corner_Outer.fbx" id="52_i611h"]
+[ext_resource type="PackedScene" uid="uid://bac1xjw4uy5u6" path="res://scenes/Scifikit/Walls/TopPlastic_Corner_Round_Inner.fbx" id="53_j7a4g"]
+[ext_resource type="PackedScene" uid="uid://cvl8tgwffax1b" path="res://scenes/Scifikit/Walls/TopPlastic_Corner_Round_Outer.fbx" id="54_leihh"]
+[ext_resource type="PackedScene" uid="uid://dyimf0pl0gtwv" path="res://scenes/Scifikit/Walls/TopPlastic_Straight.fbx" id="55_cvcee"]
+[ext_resource type="PackedScene" uid="uid://cuyjkl2u5j2r0" path="res://scenes/Scifikit/Walls/TopSimple_Corner_Round_Inner.fbx" id="56_g8yk1"]
+[ext_resource type="PackedScene" uid="uid://ducmwxb7nx2dw" path="res://scenes/Scifikit/Walls/TopSimple_Corner_Round_Outer.fbx" id="57_7mp1n"]
+[ext_resource type="PackedScene" uid="uid://d2xh3w8mcx6fv" path="res://scenes/Scifikit/Walls/TopSimple_Straight.fbx" id="58_rh0mh"]
+[ext_resource type="PackedScene" uid="uid://cgvjpmpfbmvl8" path="res://scenes/Scifikit/Walls/TopWindow_Corner_Curve_Inner.fbx" id="59_pv46u"]
+[ext_resource type="PackedScene" uid="uid://d2sub5w5ayeb3" path="res://scenes/Scifikit/Walls/TopWindow_Corner_Curve_Outer.fbx" id="60_3hhw0"]
+[ext_resource type="PackedScene" uid="uid://pata5g7td2fv" path="res://scenes/Scifikit/Walls/TopWindow_Straight.fbx" id="61_cxsmu"]
+[ext_resource type="PackedScene" uid="uid://dloxsf44wmy3f" path="res://scenes/Scifikit/Walls/WallAstra_Corner_Round_Inner.fbx" id="62_05pcu"]
+[ext_resource type="PackedScene" uid="uid://clxiuop483cur" path="res://scenes/Scifikit/Walls/WallAstra_Corner_Round_Outer.fbx" id="63_k0hpt"]
+[ext_resource type="PackedScene" uid="uid://bfxmy8a440m4a" path="res://scenes/Scifikit/Walls/WallAstra_Corner_Square_Inner.fbx" id="64_g34wy"]
+[ext_resource type="PackedScene" uid="uid://dfrngd08y3ham" path="res://scenes/Scifikit/Walls/WallAstra_Corner_Square_Outer.fbx" id="65_v3r3k"]
+[ext_resource type="PackedScene" uid="uid://lalwxxm1pglv" path="res://scenes/Scifikit/Walls/WallAstra_Straight.fbx" id="66_l0b7d"]
+[ext_resource type="PackedScene" uid="uid://7nvfipuv7iai" path="res://scenes/Scifikit/Walls/WallAstra_Straight_Broken.fbx" id="67_migvp"]
+[ext_resource type="PackedScene" uid="uid://i233m0423ken" path="res://scenes/Scifikit/Walls/WallAstra_Straight_Divided.fbx" id="68_irabx"]
+[ext_resource type="PackedScene" uid="uid://dijpdw1nkuhuk" path="res://scenes/Scifikit/Walls/WallAstra_Straight_Flat.fbx" id="69_cd8fa"]
+[ext_resource type="PackedScene" uid="uid://u47xscfedu4m" path="res://scenes/Scifikit/Walls/WallAstra_Straight_Flat_Window.fbx" id="70_dj2g1"]
+[ext_resource type="PackedScene" uid="uid://decbvally6o01" path="res://scenes/Scifikit/Walls/WallAstra_Straight_Window.fbx" id="71_6thd7"]
+[ext_resource type="PackedScene" uid="uid://ttgx3630ix37" path="res://scenes/Scifikit/Walls/WallBand_Corner_Round_Inner.fbx" id="72_vlduh"]
+[ext_resource type="PackedScene" uid="uid://bmdg5li0cu22y" path="res://scenes/Scifikit/Walls/WallBand_Corner_Round_Outer.fbx" id="73_j116b"]
+[ext_resource type="PackedScene" uid="uid://bx6konrpd5uy1" path="res://scenes/Scifikit/Walls/WallBand_Corner_Square_Inner.fbx" id="74_cptwf"]
+[ext_resource type="PackedScene" uid="uid://beeejydgxdw6d" path="res://scenes/Scifikit/Walls/WallBand_Corner_Square_Outer.fbx" id="75_xbptl"]
+[ext_resource type="PackedScene" uid="uid://jyy1grkev7hc" path="res://scenes/Scifikit/Walls/WallBand_Straight.fbx" id="76_5g3mr"]
+[ext_resource type="PackedScene" uid="uid://dgxr06cq4ksgt" path="res://scenes/Scifikit/Walls/WallBand_Straight_Broken.fbx" id="77_oj0q2"]
+[ext_resource type="PackedScene" uid="uid://d3acjgmx4n1g5" path="res://scenes/Scifikit/Walls/WallWindow_Cap_A.fbx" id="78_2gggh"]
+[ext_resource type="PackedScene" uid="uid://yuhxtu657rcn" path="res://scenes/Scifikit/Walls/WallWindow_Cap_B.fbx" id="79_joe5v"]
+[ext_resource type="PackedScene" uid="uid://d383exc35f7s3" path="res://scenes/Scifikit/Walls/WallWindow_Corner_Round_Inner.fbx" id="80_ckfv8"]
+[ext_resource type="PackedScene" uid="uid://dxp5eu8fu5olg" path="res://scenes/Scifikit/Walls/WallWindow_Corner_Round_Outer.fbx" id="81_1n7an"]
+[ext_resource type="PackedScene" uid="uid://bcvc1p3u4xc35" path="res://scenes/Scifikit/Walls/WallWindow_Corner_Square_Inner.fbx" id="82_od6ab"]
+[ext_resource type="PackedScene" uid="uid://ckbucnf1p3xdw" path="res://scenes/Scifikit/Walls/WallWindow_Corner_Square_Outer.fbx" id="83_xca4w"]
+[ext_resource type="PackedScene" uid="uid://c5334r8t0taa7" path="res://scenes/Scifikit/Walls/WallWindow_Straight.fbx" id="84_x61eu"]
+
+[node name="Walls" type="Node3D"]
+
+[node name="BottomMetal_Corner_Round_Inner" parent="." instance=ExtResource("1_k1fpm")]
+
+[node name="BottomMetal_Corner_Round_Outer" parent="." instance=ExtResource("2_q7hoo")]
+
+[node name="BottomMetal_Corner_Square_Inner" parent="." instance=ExtResource("3_d700o")]
+
+[node name="BottomMetal_Corner_Square_Outer_1" parent="." instance=ExtResource("4_5jbar")]
+
+[node name="BottomMetal_Corner_Square_Outer_2" parent="." instance=ExtResource("5_6lunf")]
+
+[node name="BottomMetal_Straight" parent="." instance=ExtResource("6_w8sov")]
+
+[node name="BottomSimple_Corner_Round_Inner" parent="." instance=ExtResource("7_cv3m1")]
+
+[node name="BottomSimple_Corner_Round_Outer" parent="." instance=ExtResource("8_7a6ub")]
+
+[node name="BottomSimple_Corner_Square_Inner" parent="." instance=ExtResource("9_yljq2")]
+
+[node name="BottomSimple_Corner_Square_Outer_1" parent="." instance=ExtResource("10_8677c")]
+
+[node name="BottomSimple_Corner_Square_Outer_2" parent="." instance=ExtResource("11_2vg2a")]
+
+[node name="BottomSimple_Straight" parent="." instance=ExtResource("12_qhrv1")]
+
+[node name="ShortWall_AccentStrip_Corner_Inner" parent="." instance=ExtResource("13_lgvib")]
+
+[node name="ShortWall_AccentStrip_Corner_Outer" parent="." instance=ExtResource("14_rhbab")]
+
+[node name="ShortWall_AccentStrip_Straight" parent="." instance=ExtResource("15_mk25t")]
+
+[node name="ShortWall_Band2_Corner_Inner" parent="." instance=ExtResource("16_lkavq")]
+
+[node name="ShortWall_Band2_Corner_Outer" parent="." instance=ExtResource("17_p1s1r")]
+
+[node name="ShortWall_Band2_Straight" parent="." instance=ExtResource("18_hvd1p")]
+
+[node name="ShortWall_DarkMetal2_Corner_Inner" parent="." instance=ExtResource("19_m1rrk")]
+
+[node name="ShortWall_DarkMetal2_Corner_Outer" parent="." instance=ExtResource("20_u1q2l")]
+
+[node name="ShortWall_DarkMetal2_Straight" parent="." instance=ExtResource("21_y577m")]
+
+[node name="ShortWall_DarkPlastic_Corner_Inner" parent="." instance=ExtResource("22_4vyw6")]
+
+[node name="ShortWall_DarkPlastic_Corner_Outer" parent="." instance=ExtResource("23_fdcqx")]
+
+[node name="ShortWall_DarkPlastic_Straight" parent="." instance=ExtResource("24_3i8wl")]
+
+[node name="ShortWall_Metal2_Corner_Inner" parent="." instance=ExtResource("25_liogj")]
+
+[node name="ShortWall_Metal2_Corner_Outer" parent="." instance=ExtResource("26_tj63s")]
+
+[node name="ShortWall_Metal2_Straight" parent="." instance=ExtResource("27_0po3e")]
+
+[node name="ShortWall_MetalPlates_Corner_Inner" parent="." instance=ExtResource("28_oyrnp")]
+
+[node name="ShortWall_MetalPlates_Corner_Outer" parent="." instance=ExtResource("29_nxoy8")]
+
+[node name="ShortWall_MetalPlates_Straight" parent="." instance=ExtResource("30_u7ypd")]
+
+[node name="ShortWall_Simple1_Corner_Inner" parent="." instance=ExtResource("31_cvbm1")]
+
+[node name="ShortWall_Simple1_Corner_Outer" parent="." instance=ExtResource("32_hlchl")]
+
+[node name="ShortWall_Simple1_Straight" parent="." instance=ExtResource("33_ws2qo")]
+
+[node name="ShortWall_Simple2_Corner_Inner" parent="." instance=ExtResource("34_qyx8q")]
+
+[node name="ShortWall_Simple2_Corner_Outer" parent="." instance=ExtResource("35_7ut18")]
+
+[node name="ShortWall_Simple2_Straight" parent="." instance=ExtResource("36_0yifx")]
+
+[node name="ShortWall_Triangles_Corner_Inner" parent="." instance=ExtResource("37_m2nn3")]
+
+[node name="ShortWall_Triangles_Corner_Outer" parent="." instance=ExtResource("38_7u6or")]
+
+[node name="ShortWall_Triangles_Straight" parent="." instance=ExtResource("39_1sh46")]
+
+[node name="ShortWall_WhitePlate2_Corner_Inner" parent="." instance=ExtResource("40_gof2x")]
+
+[node name="ShortWall_WhitePlate2_Corner_Outer" parent="." instance=ExtResource("41_0g65k")]
+
+[node name="ShortWall_WhitePlate2_Straight" parent="." instance=ExtResource("42_16mry")]
+
+[node name="TopAstra_Corner_Round_Inner" parent="." instance=ExtResource("43_lk7ae")]
+
+[node name="TopAstra_Curve_Round_Outer" parent="." instance=ExtResource("44_7ubwg")]
+
+[node name="TopAstra_Straight" parent="." instance=ExtResource("45_2b2d3")]
+
+[node name="TopCables_Corner_Round_Inner" parent="." instance=ExtResource("46_s0ten")]
+
+[node name="TopCables_Corner_Round_Outer" parent="." instance=ExtResource("47_07p8s")]
+
+[node name="TopCables_Corner_Square_Inner" parent="." instance=ExtResource("48_wohdh")]
+
+[node name="TopCables_Corner_Square_Outer" parent="." instance=ExtResource("49_gn87w")]
+
+[node name="TopCables_Straight" parent="." instance=ExtResource("50_mwnwj")]
+
+[node name="TopCables_Straight_Hanging" parent="." instance=ExtResource("51_jcl7m")]
+
+[node name="TopPlastic_Corner_Outer" parent="." instance=ExtResource("52_i611h")]
+
+[node name="TopPlastic_Corner_Round_Inner" parent="." instance=ExtResource("53_j7a4g")]
+
+[node name="TopPlastic_Corner_Round_Outer" parent="." instance=ExtResource("54_leihh")]
+
+[node name="TopPlastic_Straight" parent="." instance=ExtResource("55_cvcee")]
+
+[node name="TopSimple_Corner_Round_Inner" parent="." instance=ExtResource("56_g8yk1")]
+
+[node name="TopSimple_Corner_Round_Outer" parent="." instance=ExtResource("57_7mp1n")]
+
+[node name="TopSimple_Straight" parent="." instance=ExtResource("58_rh0mh")]
+
+[node name="TopWindow_Corner_Curve_Inner" parent="." instance=ExtResource("59_pv46u")]
+
+[node name="TopWindow_Corner_Curve_Outer" parent="." instance=ExtResource("60_3hhw0")]
+
+[node name="TopWindow_Straight" parent="." instance=ExtResource("61_cxsmu")]
+
+[node name="WallAstra_Corner_Round_Inner" parent="." instance=ExtResource("62_05pcu")]
+
+[node name="WallAstra_Corner_Round_Outer" parent="." instance=ExtResource("63_k0hpt")]
+
+[node name="WallAstra_Corner_Square_Inner" parent="." instance=ExtResource("64_g34wy")]
+
+[node name="WallAstra_Corner_Square_Outer" parent="." instance=ExtResource("65_v3r3k")]
+
+[node name="WallAstra_Straight" parent="." instance=ExtResource("66_l0b7d")]
+
+[node name="WallAstra_Straight_Broken" parent="." instance=ExtResource("67_migvp")]
+
+[node name="WallAstra_Straight_Divided" parent="." instance=ExtResource("68_irabx")]
+
+[node name="WallAstra_Straight_Flat" parent="." instance=ExtResource("69_cd8fa")]
+
+[node name="WallAstra_Straight_Flat_Window" parent="." instance=ExtResource("70_dj2g1")]
+
+[node name="WallAstra_Straight_Window" parent="." instance=ExtResource("71_6thd7")]
+
+[node name="WallBand_Corner_Round_Inner" parent="." instance=ExtResource("72_vlduh")]
+
+[node name="WallBand_Corner_Round_Outer" parent="." instance=ExtResource("73_j116b")]
+
+[node name="WallBand_Corner_Square_Inner" parent="." instance=ExtResource("74_cptwf")]
+
+[node name="WallBand_Corner_Square_Outer" parent="." instance=ExtResource("75_xbptl")]
+
+[node name="WallBand_Straight" parent="." instance=ExtResource("76_5g3mr")]
+
+[node name="WallBand_Straight_Broken" parent="." instance=ExtResource("77_oj0q2")]
+
+[node name="WallWindow_Cap_A" parent="." instance=ExtResource("78_2gggh")]
+
+[node name="WallWindow_Cap_B" parent="." instance=ExtResource("79_joe5v")]
+
+[node name="WallWindow_Corner_Round_Inner" parent="." instance=ExtResource("80_ckfv8")]
+
+[node name="WallWindow_Corner_Round_Outer" parent="." instance=ExtResource("81_1n7an")]
+
+[node name="WallWindow_Corner_Square_Inner" parent="." instance=ExtResource("82_od6ab")]
+
+[node name="WallWindow_Corner_Square_Outer" parent="." instance=ExtResource("83_xca4w")]
+
+[node name="WallWindow_Straight" parent="." instance=ExtResource("84_x61eu")]

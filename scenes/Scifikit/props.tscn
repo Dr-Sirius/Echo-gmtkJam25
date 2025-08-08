@@ -1,0 +1,88 @@
+[gd_scene load_steps=29 format=3 uid="uid://cqnhcssucuffp"]
+
+[ext_resource type="PackedScene" uid="uid://bnk5dxmhqx3cr" path="res://scenes/Scifikit/Props/Prop_AccessPoint.fbx" id="1_dj2ap"]
+[ext_resource type="PackedScene" uid="uid://dnwgskvh37fcp" path="res://scenes/Scifikit/Props/Prop_Barrel_Large.fbx" id="2_4qifb"]
+[ext_resource type="PackedScene" uid="uid://daq5juluvnfok" path="res://scenes/Scifikit/Props/Prop_Cable_1.fbx" id="3_rhm12"]
+[ext_resource type="PackedScene" uid="uid://pv8nv5o1hncr" path="res://scenes/Scifikit/Props/Prop_Cable_3.fbx" id="4_twvg1"]
+[ext_resource type="PackedScene" uid="uid://dp4klpvvlbxng" path="res://scenes/Scifikit/Props/Prop_Chest.fbx" id="5_iurlx"]
+[ext_resource type="PackedScene" uid="uid://chalwqugo7xak" path="res://scenes/Scifikit/Props/Prop_Clamp.fbx" id="6_q48cf"]
+[ext_resource type="PackedScene" uid="uid://ci1gwuc1ds3cr" path="res://scenes/Scifikit/Props/Prop_Computer.fbx" id="7_cmnd3"]
+[ext_resource type="PackedScene" uid="uid://ch3lg25ydfgyx" path="res://scenes/Scifikit/Props/Prop_Crate3.fbx" id="8_cxcvw"]
+[ext_resource type="PackedScene" uid="uid://dx6j824wtitug" path="res://scenes/Scifikit/Props/Prop_Crate4.fbx" id="9_krvft"]
+[ext_resource type="PackedScene" uid="uid://xythcooo5rvf" path="res://scenes/Scifikit/Props/Prop_Fan_Small.fbx" id="10_ssed6"]
+[ext_resource type="PackedScene" uid="uid://ct00r3oyvwbv3" path="res://scenes/Scifikit/Props/Prop_ItemHolder.fbx" id="11_qy72d"]
+[ext_resource type="PackedScene" uid="uid://b5mje7plgnfxd" path="res://scenes/Scifikit/Props/Prop_Light_Corner.fbx" id="12_2jqpa"]
+[ext_resource type="PackedScene" uid="uid://c5awq6febhuj4" path="res://scenes/Scifikit/Props/Prop_Light_Floor.fbx" id="13_dv7sg"]
+[ext_resource type="PackedScene" uid="uid://c3ppkk1mtoks7" path="res://scenes/Scifikit/Props/Prop_Light_Small.fbx" id="14_2o4yc"]
+[ext_resource type="PackedScene" uid="uid://dllc8otd2pkla" path="res://scenes/Scifikit/Props/Prop_Light_Wide.fbx" id="15_itk8e"]
+[ext_resource type="PackedScene" uid="uid://nwpimueqberb" path="res://scenes/Scifikit/Props/Prop_PipeHolder.fbx" id="16_er0d7"]
+[ext_resource type="PackedScene" uid="uid://c2ejypundf1kp" path="res://scenes/Scifikit/Props/Prop_Rail_2.fbx" id="17_a75ku"]
+[ext_resource type="PackedScene" uid="uid://dt6khlkcl1cac" path="res://scenes/Scifikit/Props/Prop_Rail_3.fbx" id="18_6qkgb"]
+[ext_resource type="PackedScene" uid="uid://danvhn0xwttw1" path="res://scenes/Scifikit/Props/Prop_Rail_4.fbx" id="19_4ytmb"]
+[ext_resource type="PackedScene" uid="uid://b6mu4y1b1u6kq" path="res://scenes/Scifikit/Props/Prop_Rail_Incline_Long_L.fbx" id="20_vgooy"]
+[ext_resource type="PackedScene" uid="uid://c6yjqhwe3n6pr" path="res://scenes/Scifikit/Props/Prop_Rail_Incline_Long_R.fbx" id="21_c7srh"]
+[ext_resource type="PackedScene" uid="uid://bkyerpx4ukwd1" path="res://scenes/Scifikit/Props/Prop_Rail_Incline_Short_L.fbx" id="22_e86wo"]
+[ext_resource type="PackedScene" uid="uid://i0aujmn0fhsk" path="res://scenes/Scifikit/Props/Prop_Rail_Incline_Short_R.fbx" id="23_vj623"]
+[ext_resource type="PackedScene" uid="uid://ujb5qyvkq1v7" path="res://scenes/Scifikit/Props/Prop_Rail_Round_Big.fbx" id="24_evn6w"]
+[ext_resource type="PackedScene" uid="uid://b8ctc3rb3rxpn" path="res://scenes/Scifikit/Props/Prop_Rail_Round_Small.fbx" id="25_qxk73"]
+[ext_resource type="PackedScene" uid="uid://b1qt2068k71pl" path="res://scenes/Scifikit/Props/Prop_Vent_Big.fbx" id="26_13n2b"]
+[ext_resource type="PackedScene" uid="uid://chongppgiecwo" path="res://scenes/Scifikit/Props/Prop_Vent_Small.fbx" id="27_pgu7q"]
+[ext_resource type="PackedScene" uid="uid://did7l78akud5" path="res://scenes/Scifikit/Props/Prop_Vent_Wide.fbx" id="28_dtjbn"]
+
+[node name="Props" type="Node3D"]
+
+[node name="Prop_AccessPoint" parent="." instance=ExtResource("1_dj2ap")]
+
+[node name="Prop_Barrel_Large" parent="." instance=ExtResource("2_4qifb")]
+
+[node name="Prop_Cable_1" parent="." instance=ExtResource("3_rhm12")]
+
+[node name="Prop_Cable_3" parent="." instance=ExtResource("4_twvg1")]
+
+[node name="Prop_Chest" parent="." instance=ExtResource("5_iurlx")]
+
+[node name="Prop_Clamp" parent="." instance=ExtResource("6_q48cf")]
+
+[node name="Prop_Computer" parent="." instance=ExtResource("7_cmnd3")]
+
+[node name="Prop_Crate3" parent="." instance=ExtResource("8_cxcvw")]
+
+[node name="Prop_Crate4" parent="." instance=ExtResource("9_krvft")]
+
+[node name="Prop_Fan_Small" parent="." instance=ExtResource("10_ssed6")]
+
+[node name="Prop_ItemHolder" parent="." instance=ExtResource("11_qy72d")]
+
+[node name="Prop_Light_Corner" parent="." instance=ExtResource("12_2jqpa")]
+
+[node name="Prop_Light_Floor" parent="." instance=ExtResource("13_dv7sg")]
+
+[node name="Prop_Light_Small" parent="." instance=ExtResource("14_2o4yc")]
+
+[node name="Prop_Light_Wide" parent="." instance=ExtResource("15_itk8e")]
+
+[node name="Prop_PipeHolder" parent="." instance=ExtResource("16_er0d7")]
+
+[node name="Prop_Rail_2" parent="." instance=ExtResource("17_a75ku")]
+
+[node name="Prop_Rail_3" parent="." instance=ExtResource("18_6qkgb")]
+
+[node name="Prop_Rail_4" parent="." instance=ExtResource("19_4ytmb")]
+
+[node name="Prop_Rail_Incline_Long_L" parent="." instance=ExtResource("20_vgooy")]
+
+[node name="Prop_Rail_Incline_Long_R" parent="." instance=ExtResource("21_c7srh")]
+
+[node name="Prop_Rail_Incline_Short_L" parent="." instance=ExtResource("22_e86wo")]
+
+[node name="Prop_Rail_Incline_Short_R" parent="." instance=ExtResource("23_vj623")]
+
+[node name="Prop_Rail_Round_Big" parent="." instance=ExtResource("24_evn6w")]
+
+[node name="Prop_Rail_Round_Small" parent="." instance=ExtResource("25_qxk73")]
+
+[node name="Prop_Vent_Big" parent="." instance=ExtResource("26_13n2b")]
+
+[node name="Prop_Vent_Small" parent="." instance=ExtResource("27_pgu7q")]
+
+[node name="Prop_Vent_Wide" parent="." instance=ExtResource("28_dtjbn")]

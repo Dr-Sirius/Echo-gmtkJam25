@@ -23,7 +23,7 @@ AppConfig="*res://addons/maaacks_options_menus/base/scenes/autoloads/app_config.
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg")
+enabled=PackedStringArray("res://addons/csg_toolkit/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sk_fly_camera/plugin.cfg")
 
 [input]
 
