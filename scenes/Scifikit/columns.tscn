@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=3 uid="uid://bfv5ci4xyb882"]
+
+[ext_resource type="PackedScene" uid="uid://bijxcnmny6fl5" path="res://scenes/Scifikit/Columns/Column_Astra.fbx" id="1_137gp"]
+[ext_resource type="PackedScene" uid="uid://dy2lfxwsl5tbg" path="res://scenes/Scifikit/Columns/Column_Hollow.fbx" id="2_a4sf6"]
+[ext_resource type="PackedScene" uid="uid://ddxumig24g8y0" path="res://scenes/Scifikit/Columns/Column_Large_Straight.fbx" id="3_hni45"]
+[ext_resource type="PackedScene" uid="uid://c13urm3vu3q8w" path="res://scenes/Scifikit/Columns/Column_MetalSupport.fbx" id="4_xksa2"]
+[ext_resource type="PackedScene" uid="uid://b7pejx8foxyvr" path="res://scenes/Scifikit/Columns/Column_MetalSupport_Curve.fbx" id="5_56gmq"]
+[ext_resource type="PackedScene" uid="uid://dxw5mhbbpkewh" path="res://scenes/Scifikit/Columns/Column_Pipes.fbx" id="6_xn3pb"]
+[ext_resource type="PackedScene" uid="uid://chu5wd4p5ly32" path="res://scenes/Scifikit/Columns/Column_Round.fbx" id="7_q20gm"]
+[ext_resource type="PackedScene" uid="uid://ds2wbi4a5nr3j" path="res://scenes/Scifikit/Columns/Column_Simple.fbx" id="8_ty4oh"]
+
+[node name="Columns" type="Node3D"]
+
+[node name="Column_Astra" parent="." instance=ExtResource("1_137gp")]
+
+[node name="Column_Hollow" parent="." instance=ExtResource("2_a4sf6")]
+
+[node name="Column_Large_Straight" parent="." instance=ExtResource("3_hni45")]
+
+[node name="Column_MetalSupport" parent="." instance=ExtResource("4_xksa2")]
+
+[node name="Column_MetalSupport_Curve" parent="." instance=ExtResource("5_56gmq")]
+
+[node name="Column_Pipes" parent="." instance=ExtResource("6_xn3pb")]
+
+[node name="Column_Round" parent="." instance=ExtResource("7_q20gm")]
+
+[node name="Column_Simple" parent="." instance=ExtResource("8_ty4oh")]
