@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnam3oxlx0kay"]
+
+[ext_resource type="Script" uid="uid://bwoeneb4wi4ax" path="res://addons/bulk_mesh_collision_shape_exporter/NumberEditPopup/number_enter_popup.gd" id="1_qut33"]
+[ext_resource type="Script" uid="uid://duof4fawclfk7" path="res://addons/bulk_mesh_collision_shape_exporter/NumberEditPopup/number_slider.gd" id="2_vmlnw"]
+[ext_resource type="Script" uid="uid://defsq7alqdjjf" path="res://addons/bulk_mesh_collision_shape_exporter/NumberEditPopup/line_edit.gd" id="3_oa1a4"]
+[ext_resource type="Script" uid="uid://bayr57163fotd" path="res://addons/bulk_mesh_collision_shape_exporter/NumberEditPopup/h_slider.gd" id="4_t2lbg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqhxo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7kjb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8x7a"]
+
+[sub_resource type="Theme" id="Theme_66uqa"]
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_qqhxo")
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_d7kjb")
+LineEdit/styles/read_only = SubResource("StyleBoxEmpty_n8x7a")
+
+[node name="DefaultNumberEnterPopup" type="Popup"]
+visible = true
+script = ExtResource("1_qut33")
+metadata/_custom_type_script = "uid://bwoeneb4wi4ax"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("2_vmlnw")
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+anchor_left = 0.01
+anchor_top = 0.175
+anchor_right = 1.0
+anchor_bottom = 0.404
+offset_top = -0.500002
+offset_right = 2.0
+offset_bottom = 0.599998
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme = SubResource("Theme_66uqa")
+alignment = 1
+expand_to_text_length = true
+script = ExtResource("3_oa1a4")
+
+[node name="HSlider" type="HSlider" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+anchor_top = 0.41
+anchor_right = 1.0
+anchor_bottom = 0.589
+offset_bottom = 1.09999
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 10.0
+allow_greater = true
+script = ExtResource("4_t2lbg")
+
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="editing_toggled" from="HBoxContainer/MarginContainer/LineEdit" to="HBoxContainer/MarginContainer/LineEdit" method="_on_editing_toggled"]
+[connection signal="text_changed" from="HBoxContainer/MarginContainer/LineEdit" to="HBoxContainer/MarginContainer" method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="HBoxContainer/MarginContainer/LineEdit" to="HBoxContainer/MarginContainer" method="_on_line_edit_text_submitted"]
+[connection signal="drag_ended" from="HBoxContainer/MarginContainer/HSlider" to="HBoxContainer/MarginContainer/HSlider" method="_on_drag_ended"]
+[connection signal="value_changed" from="HBoxContainer/MarginContainer/HSlider" to="HBoxContainer/MarginContainer" method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="HBoxContainer/MarginContainer/HSlider" to="HBoxContainer/MarginContainer/HSlider" method="_on_value_changed"]

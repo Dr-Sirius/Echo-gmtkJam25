@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4x4htbgd804h"]
+
+[ext_resource type="Script" uid="uid://dw68rr8v2vs0k" path="res://addons/bulk_mesh_collision_shape_exporter/bulk_export_button.gd" id="1_lt7is"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lt7is"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o2hrs"]
+
+[sub_resource type="Theme" id="Theme_lt7is"]
+Button/styles/focus = SubResource("StyleBoxEmpty_lt7is")
+Button/styles/normal = SubResource("StyleBoxEmpty_o2hrs")
+
+[node name="BulkExportMenu" type="MenuButton"]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_lt7is")
+text = "Bulk Mesh2Collision"
+item_count = 4
+popup/item_0/text = "Export Collision Shapes"
+popup/item_0/id = 0
+popup/item_1/text = "General Search Depth"
+popup/item_1/id = 1
+popup/item_2/text = "Search Depth After First Mesh"
+popup/item_2/id = 2
+popup/item_3/text = "Simplify Shapes"
+popup/item_3/checkable = 1
+popup/item_3/checked = true
+popup/item_3/id = 3
+script = ExtResource("1_lt7is")
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
