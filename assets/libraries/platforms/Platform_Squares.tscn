@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=4 uid="uid://bsuimg1uj7566"]
+
+[ext_resource type="Texture2D" uid="uid://d0muu1ng8tr16" path="res://Textures/T_Trim_02_BaseColor.png" id="1_426xc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a5q0g"]
+resource_name = "MI_Trim_02_Floor"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_426xc")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ssial"]
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"format": 34359742465,
+"index_count": 72,
+"index_data": PackedByteArray("DAANAAAAAAANAAYABgAHAAAAAAAHAAgABgANAAIAAgANAAwAAgAEAAYAAwAEAAIACAAOAAAAAAAOAAwAAgAPAAMADAAPAAIAAwAPAAEAAQAPAAwAAQAFAAMACQAFAAEADAAQAAEAAQAQAAkADAAOAAoACgAQAAwACgAOAAgACQAQAAoACAALAAoACgALAAkA"),
+"lods": [1e-10, PackedByteArray("AAABAAIAAgABAAMAAwAEAAIAAQAFAAMAAgAEAAYAAAACAAYABgAHAAAAAAAHAAgACQAFAAEACgAAAAgAAAAKAAEAAQAKAAkACAALAAoACgALAAkA")],
+"name": "MI_Trim_02_Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 17,
+"vertex_data": PackedByteArray("biWavG4lmrwAAAAAbiWaPG4lmjwAAAAAbiWaPG4lmrwAAAAACtejPAAAAAAAAAAACtejPArXo7wAAAAACtejPArXozwAAAAAAAAAAArXo7wAAAAACtejvArXo7wAAAAACtejvAAAAAAAAAAAAAAAAArXozwAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWavAAAAAAAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ja4gx"]
+resource_name = "Plane_120"
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"attribute_data": PackedByteArray("SjV0PjQrAz9KNXQ+NCsDP0o1dD40KwM/SjV0PjQrAz9Pbva+sGJ9PX4DC78AUB05AAAAPwBgHTmVm70/sGJ9Pb+BxT8AUB05////PgCQHTmcgcU/ALAdOXKbvT+wYn09zG32vlBifT03Awu/AFAdOf7//z4AoB05l4HFPwDAHTlum70/wGJ9Pb1t9r5gYn09LgMLvwBQHTkwbva+oGJ9PWwDC78AUB05////PgBwHTmMm70/oGJ9PbaBxT8AUB05kc7/Pho0gz6Rzv8+NCsDP0o1dD4aNIM+SjV0Pho0gz6Rzv8+NCsDPwAAAD/AYn09////PpBifT3+//8+oGJ9Pf///z7AYn09"),
+"format": 34359742487,
+"index_count": 72,
+"index_data": PackedByteArray("GAAZAAAAAgAZABgAAAAaABgAGAAbAAIAGAAaAAMAAQAbABgAAwAcABgAGAAcAAEABgAdAAQABAAFAAYABwAdAAYABgAIAAcACQAKAAsACwAeAAkACQAeAAwADAANAAkADgAPABAAEAAfAA4ADgAfABEAEQASAA4AFQAgABMAEwAUABUAFgAgABUAFQAXABYA"),
+"lods": [1e-10, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAEAAYABgAIAAcACQAKAAsACwAMAAkADAANAAkADgAPABAAEAARAA4AEQASAA4AEwAUABUAFgATABUAFQAXABYA")],
+"material": SubResource("StandardMaterial3D_a5q0g"),
+"name": "MI_Trim_02_Floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 33,
+"vertex_data": PackedByteArray("biWavG4lmrwAAAAAbiWaPG4lmjwAAAAAbiWaPG4lmrwAAAAAbiWavG4lmjwAAAAAbiWavG4lmrwAAAAACtejvArXo7wAAAAACtejvAAAAAAAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAArXo7wAAAAACtejvArXo7wAAAAAbiWavG4lmrwAAAAAbiWaPG4lmrwAAAAACtejPArXo7wAAAAACtejPAAAAAAAAAAACtejPArXo7wAAAAAbiWaPG4lmrwAAAAAbiWaPG4lmjwAAAAACtejPArXozwAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAArXozwAAAAAbiWaPG4lmjwAAAAACtejPArXozwAAAAAAAAAAAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWavAAAAAAAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAAbiWavAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAA/3//f////7//f/9/AAD/v/9//38AAP8//3//f////z//f/9//3////9//3//f////3//f/9/////f/9//3////9//3//f////3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//v//v/9//3/+//+//3//f////7//f/9//v//v/9//3/+//+//3//fwAA/7//f/9/AAD/P/9//3////8//3//fwAA/7//f/9/AAD/v/9//3//f////3//fwAA/7//f/9//38AgP9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ssial")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_flpqy"]
+points = PackedVector3Array(0.02, 0.02, 0, 0.02, -0.02, 0, -0.02, 0.02, 0, -0.02, -0.02, 0)
+
+[node name="Platform_Squares" type="Node3D"]
+
+[node name="Platform_Squares" type="Node3D" parent="."]
+
+[node name="Platform_Squares" type="MeshInstance3D" parent="Platform_Squares"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_ja4gx")
+skeleton = NodePath("")
+
+[node name="Platform_Squares_col" type="StaticBody3D" parent="Platform_Squares/Platform_Squares"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_Squares/Platform_Squares/Platform_Squares_col"]
+shape = SubResource("ConvexPolygonShape3D_flpqy")

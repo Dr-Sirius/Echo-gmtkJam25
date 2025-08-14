@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=4 uid="uid://t2o7d6068jno"]
+
+[ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="1_ufy0f"]
+[ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="2_uroar"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a45n6"]
+resource_name = "MI_Trim_01"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ufy0f")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_scale = 0.0
+normal_texture = ExtResource("2_uroar")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y52rw"]
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 1.85105e-05, 1e-05, 0.04, 0.00998149),
+"format": 34359742465,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAAAAMAAwAFAAQA"),
+"name": "MI_Trim_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("CNejvArXozxmxu07CNejvArXozwVR5s3BdejvArXo7wUVZs3BdejvArXo7xzxu07CNejvArXozwM1yM8BdejvArXo7wM1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1xoki"]
+resource_name = "Plane_240"
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 1.85105e-05, 1e-05, 0.04, 0.00998149),
+"attribute_data": PackedByteArray("IBdQP5jhrj4gF1A/RJbJPiS9QT5Elsk+JL1BPpjhrj7EUa4+SBXxPsRRrj4k3ds+hF0pPyTd2z6EXSk/SBXxPg=="),
+"format": 34359742487,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQA"),
+"material": SubResource("StandardMaterial3D_a45n6"),
+"name": "MI_Trim_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("CNejvArXozxmxu07CNejvArXozwVR5s3BdejvArXo7wUVZs3BdejvArXo7xzxu07CNejvArXozwM1yM8CNejvArXozxmxu07BdejvArXo7xzxu07BdejvArXo7wM1yM8/v//f/9////+//9//3////7//3//f////v//f/9////+//9//38AgP7//3//fwCA/v//f/9/AID+//9//38AgA==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y52rw")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pcjwl"]
+points = PackedVector3Array(-0.02, 0.02, 0.01, -0.02, 0.02, 1.85105e-05, -0.02, -0.02, 0.01, -0.02, -0.02, 1.85105e-05)
+
+[node name="ShortWall_Triangles_Straight" type="Node3D"]
+
+[node name="ShortWall_Triangles_Straight" type="Node3D" parent="."]
+
+[node name="ShortWall_Triangles_Straight" type="MeshInstance3D" parent="ShortWall_Triangles_Straight"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1xoki")
+skeleton = NodePath("")
+
+[node name="ShortWall_Triangles_Straight_col" type="StaticBody3D" parent="ShortWall_Triangles_Straight/ShortWall_Triangles_Straight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShortWall_Triangles_Straight/ShortWall_Triangles_Straight/ShortWall_Triangles_Straight_col"]
+shape = SubResource("ConvexPolygonShape3D_pcjwl")

@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://bf12ijg500736"]
+
+[ext_resource type="Texture2D" uid="uid://cm0ktntyjq0sx" path="res://Textures/T_Trim_03_BaseColor.png" id="1_hvvyw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6s0h"]
+resource_name = "MI_Trim_03"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_hvvyw")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_li3l8"]
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 1.85105e-05, 1e-05, 0.04, 0.00998149),
+"format": 34359742465,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"name": "MI_Trim_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("CNejvArXozwM1yM8CNejvArXozwVR5s3BdejvArXo7wUVZs3BdejvArXo7wM1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mth7w"]
+resource_name = "Plane_241"
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 1.85105e-05, 1e-05, 0.04, 0.00998149),
+"attribute_data": PackedByteArray("AADAP9ADjD0AAMA/mDuQPgAAAD+SO5A+AAAAP8ADjD0="),
+"format": 34359742487,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAgADAAAA"),
+"material": SubResource("StandardMaterial3D_j6s0h"),
+"name": "MI_Trim_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("CNejvArXozwM1yM8CNejvArXozwVR5s3BdejvArXo7wUVZs3BdejvArXo7wM1yM8////f/9///////9//3///////3//f/7/////f/9//v8=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_li3l8")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_s0g17"]
+points = PackedVector3Array(-0.02, 0.02, 0.01, -0.02, 0.02, 1.85105e-05, -0.02, -0.02, 0.01, -0.02, -0.02, 1.85105e-05)
+
+[node name="ShortWall_Simple1_Straight" type="Node3D"]
+
+[node name="ShortWall_Simple1_Straight" type="Node3D" parent="."]
+
+[node name="ShortWall_Simple1_Straight" type="MeshInstance3D" parent="ShortWall_Simple1_Straight"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_mth7w")
+skeleton = NodePath("")
+
+[node name="ShortWall_Simple1_Straight_col" type="StaticBody3D" parent="ShortWall_Simple1_Straight/ShortWall_Simple1_Straight"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShortWall_Simple1_Straight/ShortWall_Simple1_Straight/ShortWall_Simple1_Straight_col"]
+shape = SubResource("ConvexPolygonShape3D_s0g17")

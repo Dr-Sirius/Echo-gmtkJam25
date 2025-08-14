@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=4 uid="uid://cnu5sxj0e13vp"]
+
+[ext_resource type="Texture2D" uid="uid://bjefbsn6qyvne" path="res://Textures/T_Trim_02_BaseColor_Red.png" id="1_nexly"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f7c8"]
+resource_name = "MI_Trim_02"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_nexly")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mb6kl"]
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"format": 34359742465,
+"index_count": 72,
+"index_data": PackedByteArray("DAANAAAAAAANAAYABgAHAAAAAAAHAAgABgANAAIAAgANAAwAAgAEAAYAAwAEAAIACAAOAAAAAAAOAAwAAgAPAAMADAAPAAIAAwAPAAEAAQAPAAwAAQAFAAMACQAFAAEADAAQAAEAAQAQAAkADAAOAAoACgAQAAwACgAOAAgACQAQAAoACAALAAoACgALAAkA"),
+"lods": [1e-10, PackedByteArray("AAABAAIAAgABAAMAAwAEAAIAAQAFAAMAAgAEAAYAAAACAAYABgAHAAAAAAAHAAgACQAFAAEACgAAAAgAAAAKAAEAAQAKAAkACAALAAoACgALAAkA")],
+"name": "MI_Trim_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 17,
+"vertex_data": PackedByteArray("biWavG4lmrwAAAAAbiWaPG4lmjwAAAAAbiWaPG4lmrwAAAAACtejPAAAAAAAAAAACtejPArXo7wAAAAACtejPArXozwAAAAAAAAAAArXo7wAAAAACtejvArXo7wAAAAACtejvAAAAAAAAAAAAAAAAArXozwAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWavAAAAAAAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v2s8b"]
+resource_name = "Plane_091"
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"attribute_data": PackedByteArray("lWNEP9RNWz+VY0Q/1E1bP5VjRD/UTVs/lWNEP9RNWz9Pbva+sGJ9PX4DC78AUB05AAAAPwBgHTmVm70/sGJ9Pb+BxT8AUB05////PgCQHTmcgcU/ALAdOXKbvT+wYn09zG32vlBifT03Awu/AFAdOf7//z4AoB05l4HFPwDAHTlum70/wGJ9Pb1t9r5gYn09LgMLvwBQHTkwbva+oGJ9PWwDC78AUB05////PgBwHTmMm70/oGJ9PbaBxT8AUB05CJV9P7A1Iz8IlX0/1E1bP5VjRD+wNSM/lWNEP7A1Iz8IlX0/1E1bPwAAAD/AYn09////PpBifT3+//8+oGJ9Pf///z7AYn09"),
+"format": 34359742487,
+"index_count": 72,
+"index_data": PackedByteArray("GAAZAAAAAgAZABgAAAAaABgAGAAbAAIAGAAaAAMAAQAbABgAAwAcABgAGAAcAAEABgAdAAQABAAFAAYABwAdAAYABgAIAAcACQAKAAsACwAeAAkACQAeAAwADAANAAkADgAPABAAEAAfAA4ADgAfABEAEQASAA4AFQAgABMAEwAUABUAFgAgABUAFQAXABYA"),
+"lods": [1e-10, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABwAEAAYABgAIAAcACQAKAAsACwAMAAkADAANAAkADgAPABAAEAARAA4AEQASAA4AEwAUABUAFgATABUAFQAXABYA")],
+"material": SubResource("StandardMaterial3D_1f7c8"),
+"name": "MI_Trim_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 33,
+"vertex_data": PackedByteArray("biWavG4lmrwAAAAAbiWaPG4lmjwAAAAAbiWaPG4lmrwAAAAAbiWavG4lmjwAAAAAbiWavG4lmrwAAAAACtejvArXo7wAAAAACtejvAAAAAAAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAArXo7wAAAAACtejvArXo7wAAAAAbiWavG4lmrwAAAAAbiWaPG4lmrwAAAAACtejPArXo7wAAAAACtejPAAAAAAAAAAACtejPArXo7wAAAAAbiWaPG4lmrwAAAAAbiWaPG4lmjwAAAAACtejPArXozwAAAAAbiWavG4lmjwAAAAACtejvArXozwAAAAAAAAAAArXozwAAAAAbiWaPG4lmjwAAAAACtejPArXozwAAAAAAAAAAAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWavAAAAAAAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAAbiWavAAAAAAAAAAAAAAAAG4lmrwAAAAAbiWaPAAAAAAAAAAAAAAAAG4lmjwAAAAA/3//f////7//f/9/AAD/v/9//38AAP8//3//f////z//f/9//3////9//3//f////3//f/9/////f/9//3////9//3//f////3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//f/9/AAD/v/9//3//fwCA/3//f/9/AID/f/9//38AgP9//3//fwCA/3//f/9/AID/f/9//v//v/9//3/+//+//3//f////7//f/9//v//v/9//3/+//+//3//fwAA/7//f/9/AAD/P/9//3////8//3//fwAA/7//f/9/AAD/v/9//3//f////3//fwAA/7//f/9//38AgP9//3////+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mb6kl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xi1h4"]
+points = PackedVector3Array(0.02, 0.02, 0, 0.02, -0.02, 0, -0.02, 0.02, 0, -0.02, -0.02, 0)
+
+[node name="Platform_X" type="Node3D"]
+
+[node name="Platform_X" type="Node3D" parent="."]
+
+[node name="Platform_X" type="MeshInstance3D" parent="Platform_X"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_v2s8b")
+skeleton = NodePath("")
+
+[node name="Platform_X_col" type="StaticBody3D" parent="Platform_X/Platform_X"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_X/Platform_X/Platform_X_col"]
+shape = SubResource("ConvexPolygonShape3D_xi1h4")

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=4 uid="uid://c6rfce3bri0wg"]
+
+[ext_resource type="Texture2D" uid="uid://cxbeavbkvvi2i" path="res://Textures/T_Trim_03_Cables.png" id="1_qq6fx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kve5l"]
+resource_name = "MI_Trim_03_Dark"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_qq6fx")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q4bsl"]
+_surfaces = [{
+"aabb": AABB(-0.046, 0.04, 2.51457e-09, 0.006, 0.006, 0.000200001),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AgAIAAAAAAABAAIAAAAIAAQABAAFAAAACQAIAAIABAAIAAkAAgADAAkACQAGAAQABwAJAAMACQAHAAYA"),
+"lods": [0.000584021, PackedByteArray("AAABAAIAAwAAAAIABAAAAAMABAAFAAAAAwAGAAQAAwAHAAYA")],
+"name": "MI_Trim_03_Dark",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("gGo8vXtqPD3//18xDdcjvXpqPD3IzCwxDdcjvXpqPD3Et1E5DdcjvSwILD3kt1E5gWo8vQbXIz3Et1E5gWo8vQbXIz3KzCwxMwgsvQbXIz3kt1E5DdcjvQfXIz33t1E5gGo8vXtqPD33t1E5MwgsvS0ILD33t1E5")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xingi"]
+resource_name = "Plane_199"
+_surfaces = [{
+"aabb": AABB(-0.046, 0.04, 2.51457e-09, 0.006, 0.006, 0.000200001),
+"attribute_data": PackedByteArray("QRhIPgxvJD9WjW0+DG8kP1aNbT5onCM/Vo1tPtrhED8ooyI+aJwjPyijIj4MbyQ/KKMiPtrhED9J8g4/dD47P75OCz+/8DA/SfIOP3Q+Oz9BGEg+aJwjP0EYSD7a4RA/vk4LP3Q+Oz8="),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AgAKAAAAAAABAAIACwAKAAIAAgADAAsAAAAKAAQABAAKAAsABAAFAAAACwAGAAQACAAMAAcADAAIAAkA"),
+"lods": [0.000584021, PackedByteArray("AAABAAIAAwAAAAIABAAAAAMABAAFAAAAAwAGAAQABwAIAAkA")],
+"material": SubResource("StandardMaterial3D_kve5l"),
+"name": "MI_Trim_03_Dark",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 13,
+"vertex_data": PackedByteArray("gGo8vXtqPD3//18xDdcjvXpqPD3IzCwxDdcjvXpqPD3Et1E5DdcjvSwILD3kt1E5gWo8vQbXIz3Et1E5gWo8vQbXIz3KzCwxMwgsvQbXIz3kt1E5DdcjvSwILD3kt1E5DdcjvQfXIz33t1E5MwgsvQbXIz3kt1E5gGo8vXtqPD33t1E5MwgsvS0ILD33t1E5MwgsvS0ILD33t1E5/z//v/+//x//f/7//v//P/9//7/+//8//3//f/7//z//P/9//38AAAAA/3//fwAA/3//f/9/AAD/f/9//v//P/9//3//fwCA/3//f/9/AIBVVaqq/7//H/9//3//v/8f/3//f/9/AIA=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_q4bsl")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_itfe8"]
+points = PackedVector3Array(-0.046, 0.04, 2.51457e-09, -0.04, 0.04, 0.000200003, -0.046, 0.04, 0.000199984, -0.046, 0.046, 2.51457e-09, -0.04, 0.0459994, 2.51457e-09, -0.0420004, 0.0419998, 0.000200003, -0.04, 0.0459994, 0.000199984, -0.046, 0.046, 0.000200003)
+
+[node name="BottomSimple_Corner_Square_Outer_2" type="Node3D"]
+
+[node name="BottomSimple_Corner_Square_Outer_2" type="Node3D" parent="."]
+
+[node name="BottomSimple_Corner_Square_Outer_2" type="MeshInstance3D" parent="BottomSimple_Corner_Square_Outer_2"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_xingi")
+skeleton = NodePath("")
+
+[node name="BottomSimple_Corner_Square_Outer_2_col" type="StaticBody3D" parent="BottomSimple_Corner_Square_Outer_2/BottomSimple_Corner_Square_Outer_2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BottomSimple_Corner_Square_Outer_2/BottomSimple_Corner_Square_Outer_2/BottomSimple_Corner_Square_Outer_2_col"]
+shape = SubResource("ConvexPolygonShape3D_itfe8")
