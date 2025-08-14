@@ -25,21 +25,20 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_sqx56"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_s31ta"]
 resource_name = "Plane_159"
+lightmap_size_hint = Vector2i(82, 22)
 _surfaces = [{
 "aabb": AABB(-0.02, -0.02, 7.76866e-16, 0.006, 0.04, 0.000200003),
-"attribute_data": PackedByteArray("WokLPluKIz/zEgA/7HgkP1qJCz7seCQ/WokLPux4JD9aiQs+W4ojP1qJCz4K5xA/WokLPgrnED/6vEQ/6vkwP/q8RD/KQjs/+rxEP8pCOz/6vEQ/6vkwP92ppz6sUXk/ltUIP6tReT/dqac+rFF5P92ppz6sUXk/3amnPqxReT/zEgA/W4ojP/MSAD8K5xA/bKIBP+j5MD9sogE/y0I7P5bVCD+rUXk/"),
-"format": 34359742487,
+"attribute_data": PackedByteArray("8xIAP1uKIz8AAAA/gC56P/MSAD/seCQ/AAAAP6OLbj9aiQs+7HgkP2Rwfj+wi24/WokLPux4JD8Mzsc7sItuP1qJCz5biiM/ZHB+P4wuej9aiQs+W4ojPwzOxzuMLno/8xIAPwrnED8AAAA/T/hgPvMSAD9biiM/AAAAP0YXHT9aiQs+W4ojPwzOxztGFx0/WokLPluKIz9kcH4/OhcdP1qJCz4K5xA/DM7HO0/4YD5aiQs+CucQP2Rwfj8f+GA+bKIBP+j5MD/+//8+jC66PGyiAT/LQjs/AAAAP0/4YD76vEQ/ykI7PwzOxztP+GA++rxEP+r5MD8Mzsc7xi+6PPq8RD/KQjs/ZHB+Px/4YD76vEQ/6vkwP2Rwfj+MLro8ltUIP6tReT8AAAA/3aJLP92ppz6sUXk/ZHB+P+miSz/dqac+rFF5P2Rwfj8NAEA/ltUIP6tReT8AAAA/AABAP92ppz6sUXk/DM7HOw0AQD/dqac+rFF5PwzOxzvpoks/"),
+"format": 34359742519,
 "index_count": 48,
-"index_data": PackedByteArray("EAABAAIAAwABABAAAgAAABAAEAAEAAMAEQAQAAAABAAQABEAAAAGABEAEQAFAAQAEgATAAkACQAHABIACAATABIAEgAKAAgAFAANAAsACwAMABQAFAAMAA4ADgAPABQA"),
-"lods": [1.34952e-06, PackedByteArray("AAABAAIAAwABAAAAAAAEAAMABAAAAAUAAAAGAAUABwAIAAkABwAKAAgACwAMAA0ADQAMAA4ADgAPAA0A")],
+"index_data": PackedByteArray("AAABAAIAAwABAAAAAgAEAAAAAAAFAAMABgAHAAgACQAHAAYACAAKAAYABgALAAkADAANAA4ADgAPAAwAEAANAAwADAARABAAEgATABQAFAAVABIAEgAVABYAFgAXABIA"),
 "material": SubResource("StandardMaterial3D_3b15n"),
-"name": "MI_Trim_03_Dark",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 21,
-"vertex_data": PackedByteArray("RmBlvAzXo7z3t1E5Q2BlvAAAAACb6l8mRmBlvAzXo7yf6l8xRmBlvAzXozyf6l8xRmBlvAzXozz3t1E5vnSTvAzXozz3t1E5vnSTvAzXo7z3t1E5CtejvAzXo7z3t1E5vnSTvAzXozz3t1E5vnSTvAzXo7z3t1E5CtejvAzXozz3t1E5CtejvAzXo7yf6l8xDNejvAAAAACb6l8mCtejvAzXo7z3t1E5CtejvAzXozyf6l8xCtejvAzXozz3t1E5Q2BlvAAAAAAXt1E5vHSTvAAAAAAXt1E5DNejvAAAAAAXt1E5vHSTvAAAAAAXt1E5DNejvAAAAAAXt1E5/7//f/9//v////9//3/+f/7//3//f/7//v//f/9//n//v/9//3/+f/9//3//f/5//3//f/9//v//f/9//3/+f/9//3//f/7//3//f/9//n//f/9//3/+/wAA/3////+/AAD/f////78AAP9/////vwAA/3////+/AAD/f////7//v/9//3/+f/9//3//f/5//3//f/9/////f/9//3///wAA/3////+/")
+"vertex_count": 24,
+"vertex_data": PackedByteArray("Q2BlvAAAAAAXt1E5Q2BlvAAAAACb6l8mRmBlvAzXo7yf6l8xRmBlvAzXozyf6l8xRmBlvAzXo7z3t1E5RmBlvAzXozz3t1E5vHSTvAAAAAAXt1E5Q2BlvAAAAAAXt1E5RmBlvAzXo7z3t1E5RmBlvAzXozz3t1E5vnSTvAzXo7z3t1E5vnSTvAzXozz3t1E5DNejvAAAAAAXt1E5vHSTvAAAAAAXt1E5vnSTvAzXo7z3t1E5CtejvAzXo7z3t1E5vnSTvAzXozz3t1E5CtejvAzXozz3t1E5DNejvAAAAAAXt1E5CtejvAzXo7z3t1E5CtejvAzXo7yf6l8xDNejvAAAAACb6l8mCtejvAzXozyf6l8xCtejvAzXozz3t1E5/7//f/9//n///wCA/3/+f/7//3//f/7//v//f/9//n//v/9//3/+//+//3//f/5//3//f/9//n//v/9//3/+f/+//3//f/7//7//f/9//n//f/9//3/+//9//3//f/5//3//fwCA////f/9/AID///9//3//f/5//3//f/9//n//f/9//3/+//9//3//f/7/AAAAgP///78AAACA////vwAAAID///+/AAAAgP///78AAACA////vwAAAID///+/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pvgo7")
@@ -53,7 +52,7 @@ points = PackedVector3Array(-0.02, -0.02, 7.76866e-16, -0.0140006, -0.02, 7.7686
 
 [node name="BottomSimple_Straight" type="MeshInstance3D" parent="BottomSimple_Straight"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
-mesh = SubResource("ArrayMesh_sqx56")
+mesh = SubResource("ArrayMesh_s31ta")
 skeleton = NodePath("")
 
 [node name="BottomSimple_Straight_col" type="StaticBody3D" parent="BottomSimple_Straight/BottomSimple_Straight"]

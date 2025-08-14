@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dduymt6xdpe42"]
+
+[ext_resource type="PackedScene" uid="uid://dso1sporyuegt" path="res://assets/libraries/platforms/Platform_DarkPlates.tscn" id="1_dj0gs"]
+[ext_resource type="PackedScene" uid="uid://sk5wbpswg37k" path="res://assets/libraries/platforms/Door_Frame_Square_Blocked.tscn" id="2_vgp8m"]
+[ext_resource type="PackedScene" uid="uid://d2d3615ko3opy" path="res://assets/libraries/props/Prop_Computer.tscn" id="3_w05wd"]
+[ext_resource type="PackedScene" uid="uid://bostd1j3mb7q0" path="res://assets/libraries/platforms/Platform_Window_Wide.tscn" id="4_om4em"]
+
+[node name="Elevator" type="Node3D"]
+
+[node name="Platform_DarkPlates" parent="." instance=ExtResource("1_dj0gs")]
+
+[node name="Door_Frame_Square_Blocked" parent="." instance=ExtResource("2_vgp8m")]
+transform = Transform3D(-3.54062e-08, 0, -1, 0, 1, 0, 0.81, 0, -4.37114e-08, 2, 0, 0.1222)
+
+[node name="Door_Frame_Square_Blocked2" parent="." instance=ExtResource("2_vgp8m")]
+transform = Transform3D(-3.54062e-08, 0, -1, 0, 1, 0, 0.81, 0, -4.37114e-08, -2, 0, 0.1222)
+
+[node name="Door_Frame_Square_Blocked3" parent="." instance=ExtResource("2_vgp8m")]
+transform = Transform3D(0.81, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1222)
+
+[node name="Prop_Computer" parent="." instance=ExtResource("3_w05wd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.43417, 0, 0)
+
+[node name="Platform_Window_Wide" parent="." instance=ExtResource("4_om4em")]
+transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 5, 0)
