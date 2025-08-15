@@ -7,10 +7,11 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6xpe"]
 resource_name = "MI_Trim_03"
 vertex_color_use_as_albedo = true
+albedo_color = Color(0.445642, 0.798846, 0.975622, 1)
 albedo_texture = ExtResource("1_h35bl")
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
-emission_energy_multiplier = 0.0
+emission = Color(0.306078, 0.52582, 0.718778, 1)
+emission_energy_multiplier = 16.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c2vu0"]
 resource_name = "M_Decal_White"
@@ -117,6 +118,7 @@ points = PackedVector3Array(1.86265e-08, 0.04, 0.0499981, -3.89665e-06, 0.04, 0.
 
 [node name="TopAstra_Corner_Round_Inner" type="MeshInstance3D" parent="TopAstra_Corner_Round_Inner"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+gi_mode = 2
 mesh = SubResource("ArrayMesh_rc3m7")
 skeleton = NodePath("")
 
