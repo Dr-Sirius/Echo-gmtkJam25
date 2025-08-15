@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://rth4pfvom72s"]
 
-[ext_resource type="Script" uid="uid://bu845p771xtx5" path="res://assets/libraries/props/prop_fan_small.gd" id="1_7x6ba"]
+[ext_resource type="Script" uid="uid://bu845p771xtx5" path="res://scripts/prop_fan_small.gd" id="1_7x6ba"]
 [ext_resource type="Texture2D" uid="uid://buv8ep1cwe35y" path="res://Textures/T_Trim_01_BaseColor.png" id="1_ca7da"]
 [ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="2_7x6ba"]
 [ext_resource type="Texture2D" uid="uid://d0muu1ng8tr16" path="res://Textures/T_Trim_02_BaseColor.png" id="3_atkk0"]

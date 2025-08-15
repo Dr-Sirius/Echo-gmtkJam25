@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7m0k3d7xxvx0"]
+
+[ext_resource type="Texture2D" uid="uid://buv8ep1cwe35y" path="res://Textures/T_Trim_01_BaseColor.png" id="1_emcju"]
+[ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="2_guvrc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uk1pj"]
+albedo_texture = ExtResource("1_emcju")
+uv1_scale = Vector3(0.99, 0.425, 4.435)
+uv1_offset = Vector3(0, 0.5, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sfp8x"]
+size = Vector3(0.913086, 0.326172, 0.973633)
+
+[node name="floor_button" type="CSGBox3D" node_paths=PackedStringArray("area")]
+material_override = SubResource("StandardMaterial3D_uk1pj")
+size = Vector3(1, 0.0361328, 1)
+script = ExtResource("2_guvrc")
+area = NodePath("Area3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.185128, 0)
+shape = SubResource("BoxShape3D_sfp8x")

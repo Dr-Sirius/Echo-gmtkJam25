@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://bifrbsedvf1bd"]
+[gd_scene load_steps=59 format=4 uid="uid://bifrbsedvf1bd"]
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_lto7i"]
 [ext_resource type="PackedScene" uid="uid://i0kbrj2158cq" path="res://assets/libraries/platforms/Platform_CenterPlate.tscn" id="1_pt0fy"]
@@ -6,12 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://n503x26t2637" path="res://assets/libraries/platforms/Platform_Stairs_4WideTall.tscn" id="3_wiwjt"]
 [ext_resource type="PackedScene" uid="uid://bsuimg1uj7566" path="res://assets/libraries/platforms/Platform_Squares.tscn" id="4_lto7i"]
 [ext_resource type="PackedScene" uid="uid://yi1mja12ny4l" path="res://assets/libraries/platforms/Door_Frame_Square.tscn" id="5_yjj07"]
+[ext_resource type="Script" uid="uid://cs7wv6qnliq8t" path="res://scripts/Entities/WallEntity.gd" id="6_smjm4"]
 [ext_resource type="PackedScene" uid="uid://l4kyef8jy78h" path="res://assets/libraries/walls/WallWindow_Corner_Square_Inner.tscn" id="6_ty5xy"]
 [ext_resource type="PackedScene" uid="uid://c57n7eqhn08y1" path="res://assets/libraries/walls/WallWindow_Straight.tscn" id="7_doshn"]
 [ext_resource type="PackedScene" uid="uid://b4c7sdvp3t6s4" path="res://assets/libraries/walls/ShortWall_Metal2_Straight.tscn" id="8_w1kkg"]
 [ext_resource type="PackedScene" uid="uid://bqcskd0t2i4s0" path="res://assets/libraries/walls/TopSimple_Straight.tscn" id="9_ofr5k"]
 [ext_resource type="PackedScene" uid="uid://hux8h30v5vy4" path="res://assets/libraries/props/Prop_Rail_3.tscn" id="10_bvs07"]
-[ext_resource type="Script" uid="uid://bu845p771xtx5" path="res://assets/libraries/props/prop_fan_small.gd" id="11_1etwn"]
+[ext_resource type="Script" uid="uid://bu845p771xtx5" path="res://scripts/prop_fan_small.gd" id="11_1etwn"]
 [ext_resource type="PackedScene" uid="uid://cvsfctl774go8" path="res://assets/libraries/props/Prop_Rail_2.tscn" id="11_4dmwe"]
 [ext_resource type="PackedScene" uid="uid://b4vv62uub1yre" path="res://assets/libraries/props/Prop_Rail_4.tscn" id="12_1etwn"]
 [ext_resource type="Texture2D" uid="uid://buv8ep1cwe35y" path="res://Textures/T_Trim_01_BaseColor.png" id="12_q101p"]
@@ -33,6 +34,10 @@
 [ext_resource type="PackedScene" uid="uid://dduymt6xdpe42" path="res://scenes/tools/elevator.tscn" id="27_yjj07"]
 [ext_resource type="PackedScene" uid="uid://btql6xymbh4a0" path="res://assets/libraries/props/Prop_Crate4.tscn" id="28_doshn"]
 [ext_resource type="VoxelGIData" uid="uid://bl7pnw7boaa65" path="res://level_1_fracture.VoxelGI_data.res" id="29_ofr5k"]
+[ext_resource type="PackedScene" uid="uid://d2d3615ko3opy" path="res://assets/libraries/props/Prop_Computer.tscn" id="34_1etwn"]
+[ext_resource type="Script" uid="uid://cnijbs33wb3tl" path="res://scripts/Entities/LightEntity.gd" id="35_1v6uy"]
+[ext_resource type="PackedScene" uid="uid://b7m0k3d7xxvx0" path="res://scenes/Entities/floor_button.tscn" id="36_3m8x6"]
+[ext_resource type="PackedScene" uid="uid://buy6huk2os7kx" path="res://scenes/Entities/wall_sensor.tscn" id="37_3m8x6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6x22"]
 resource_name = "MI_Trim_01"
@@ -342,11 +347,18 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, -2,
 [node name="TopSimple_Straight2" parent="Geometry" instance=ExtResource("9_ofr5k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4, -2, 14)
 
-[node name="Door_DarkMetal" parent="Geometry" instance=ExtResource("16_smjm4")]
+[node name="Door_DarkMetal" parent="Geometry" node_paths=PackedStringArray("entity", "timer") instance=ExtResource("16_smjm4")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 5, 24)
+script = ExtResource("6_smjm4")
+entity = NodePath("../../sensor_wall")
+timer = NodePath("../../Timer")
+up_y = -3.0
 
-[node name="Door_DarkMetal2" parent="Geometry" instance=ExtResource("16_smjm4")]
+[node name="Door_DarkMetal2" parent="Geometry" node_paths=PackedStringArray("entity", "timer") instance=ExtResource("16_smjm4")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -2, 5, 24)
+script = ExtResource("6_smjm4")
+entity = NodePath("../../sensor_wall")
+timer = NodePath("../../Timer")
 
 [node name="TopAstra_Corner_Round_Inner" parent="Geometry" instance=ExtResource("18_7qy5j")]
 transform = Transform3D(-4.37114e-08, -4.37114e-08, 1, -1, 1.91069e-15, -4.37114e-08, 0, -1, -4.37114e-08, -2, 8, 21)
@@ -515,7 +527,7 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 bones/1/enabled = true
 bones/1/position = Vector3(0, 0, 0)
-bones/1/rotation = Quaternion(0, 0.346924, 0, 0.937893)
+bones/1/rotation = Quaternion(0, 0.439368, 0, 0.898307)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Propeller_end"
 bones/2/parent = 1
@@ -599,6 +611,9 @@ transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 2, 2, 16
 
 [node name="Prop_Rail_Incline_Short_R2" parent="Geometry/Props" instance=ExtResource("14_1v6uy")]
 transform = Transform3D(1, 0, -1.50996e-07, 1.32005e-14, 1, 8.74228e-08, -1.50996e-07, 8.74228e-08, -1, -2, 2, 16)
+
+[node name="Decal_Line_Straight" type="Node3D" parent="Geometry/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6222, 0.0373414, 0.65573)
 
 [node name="Wall" type="Node3D" parent="Geometry"]
 
@@ -4983,8 +4998,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 18)
 [node name="Platform_Squares6" parent="Geometry/platforms" instance=ExtResource("4_lto7i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 22)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Geometry"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 4)
+omni_range = 7.746
+
 [node name="Timer" type="Timer" parent="."]
-wait_time = 1000.0
+wait_time = 5.0
 one_shot = true
 
 [node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("26_yjj07")]
@@ -5003,5 +5022,27 @@ transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965
 
 [node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
 transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965)
+
+[node name="Prop_Computer" parent="." instance=ExtResource("34_1etwn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 0, 6.5446)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Prop_Computer" node_paths=PackedStringArray("entity")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54547, 0.123061)
+light_color = Color(1, 0, 0, 1)
+light_energy = 7.098
+omni_range = 0.410011
+omni_attenuation = 10.0
+script = ExtResource("35_1v6uy")
+deactivated_light_color = Color(1, 0, 0, 1)
+entity = NodePath("../../floor_button")
+
+[node name="floor_button" parent="." instance=ExtResource("36_3m8x6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.0600586, 4.5)
+size = Vector3(3, 0.15625, 3)
+
+[node name="sensor_wall" parent="." node_paths=PackedStringArray("entity", "timer") instance=ExtResource("37_3m8x6")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, -3.00736, 4.44823, 23.9902)
+entity = NodePath("../floor_button")
+timer = NodePath("../Timer")
 
 [editable path="Static Chamber"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://yi1mja12ny4l"]
+[gd_scene load_steps=8 format=4 uid="uid://yi1mja12ny4l"]
 
 [ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="2_2alcj"]
 [ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="3_4d6br"]
@@ -48,8 +48,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_mnecx")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i6r4n"]
-points = PackedVector3Array(0.0242672, 0.00253425, 0.05, -0.0242672, 0.00253425, 0.05, 0.0242672, -0.00253425, 0.05, 0.0242672, 0.00253425, -1.75166e-06, -0.0242672, -0.00253425, 0.05, -0.0242672, 0.00253425, -1.75166e-06, 0.0242672, -0.00253425, -1.75166e-06, 0.0129603, 0.00201182, -0.000134252, -0.0242672, -0.00253425, -1.75166e-06, -0.012965, 0.00201182, -0.000134252, 0.0129603, -0.00201231, -0.000134252, -0.012965, -0.00201231, -0.000134252)
+[sub_resource type="BoxShape3D" id="BoxShape3D_uun7o"]
+size = Vector3(0.0107422, 0.00561523, 0.0493164)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ru8n5"]
+size = Vector3(0.0146484, 0.00561523, 0.0290527)
 
 [node name="Door_Frame_Square" type="Node3D"]
 
@@ -63,4 +66,13 @@ skeleton = NodePath("")
 [node name="Door_Frame_Square_col" type="StaticBody3D" parent="Door_Frame_Square/Door_Frame_Square"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Frame_Square/Door_Frame_Square/Door_Frame_Square_col"]
-shape = SubResource("ConvexPolygonShape3D_i6r4n")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0193481, 0, 0.0256348)
+shape = SubResource("BoxShape3D_uun7o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Door_Frame_Square/Door_Frame_Square/Door_Frame_Square_col"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0190956, 0, 0.0256348)
+shape = SubResource("BoxShape3D_uun7o")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Door_Frame_Square/Door_Frame_Square/Door_Frame_Square_col"]
+transform = Transform3D(-4.37114e-08, 0, 1, 2.13163e-14, 1, 1.27055e-21, -1, 0, -4.37114e-08, 0.000318781, -2.09383e-09, 0.0425887)
+shape = SubResource("BoxShape3D_ru8n5")

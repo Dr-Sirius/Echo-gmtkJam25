@@ -100,6 +100,7 @@ height = 0.109497
 material = SubResource("StandardMaterial3D_bs833")
 script = ExtResource("5_ug0lm")
 light = NodePath("OmniLight3D")
+default_light_color = Color(0, 0.571222, 0.253303, 1)
 area = NodePath("Area3D")
 entity = NodePath("../floor_button_red")
 
