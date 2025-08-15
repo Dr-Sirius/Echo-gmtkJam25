@@ -1,33 +1,34 @@
 extends Node
 
 
-var levels: Array[PackedScene]
+var levels: Array[LevelSectionInfo]
+var current_section: LevelSectionInfo
+var current_level: PackedScene
 
-var current_level: int = 0
 
 signal level_change(next_in_line:bool,level_index:int)
 
 func _init() -> void:
 
 	level_change.connect(change_level)
-	levels = get_file_paths_by_extension("res://scenes/Levels/","tscn")
-	for i in levels:
-		print(i.resource_path, "path")
+	
+	
+	
 
 
-func change_level(next:bool,  level_id: int):
+func change_level(next:bool,  level_id: String):
 	print("changing")
 	
-	if next and current_level < len(levels):
-		current_level += 1
-		
-		get_tree().change_scene_to_packed(levels[current_level])
-	elif !next:
-		current_level = level_id
-		get_tree().change_scene_to_packed(levels[level_id])
+	#if next and current_level_n < len(levels["Fracture"].keys()):
+		#current_level_n += 1
+		#
+		#get_tree().change_scene_to_packed(levels[current_level])
+	#elif !next:
+		#current_level = level_id
+		#get_tree().change_scene_to_packed(levels[level_id])
 
 # pulled from https://www.reddit.com/r/godot/comments/k1t53k/getting_tscn_children_from_levels_folder/
-func get_file_paths_by_extension(dir_path: String, extension: String, recursive: bool = true) -> Array[PackedScene]:
+func get_file_paths_by_extension(dir_path: String, extension: String, recursive: bool = true) -> Array:
 	var dir := DirAccess.open(dir_path)
 	if dir == null:
 		printerr("Warning: Could not open: ", dir_path)
@@ -37,7 +38,7 @@ func get_file_paths_by_extension(dir_path: String, extension: String, recursive:
 		printerr("Warning: Could not list contents of: ", dir_path)
 		return []
 	
-	var file_paths: Array[PackedScene] = []
+	var file_paths: Array = []
 	var file_name: String = dir.get_next()
 	
 	while file_name != "":

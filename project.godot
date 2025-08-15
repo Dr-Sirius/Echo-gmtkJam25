@@ -24,7 +24,7 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/bulk_mesh_collision_shape_exporter/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/lightmap_probe_grid/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sk_fly_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/bulk_mesh_collision_shape_exporter/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sk_fly_camera/plugin.cfg")
 
 [input]
 

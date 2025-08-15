@@ -5024,7 +5024,7 @@ transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965
 transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965)
 
 [node name="Prop_Computer" parent="." instance=ExtResource("34_1etwn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 0, 6.5446)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -7.61295, 0, 6.5446)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Prop_Computer" node_paths=PackedStringArray("entity")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54547, 0.123061)
@@ -5037,8 +5037,8 @@ deactivated_light_color = Color(1, 0, 0, 1)
 entity = NodePath("../../floor_button")
 
 [node name="floor_button" parent="." instance=ExtResource("36_3m8x6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.0600586, 4.5)
-size = Vector3(3, 0.15625, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61295, 0.0600586, 4.65088)
+size = Vector3(3, 0.15625, 2.69824)
 
 [node name="sensor_wall" parent="." node_paths=PackedStringArray("entity", "timer") instance=ExtResource("37_3m8x6")]
 transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, -3.00736, 4.44823, 23.9902)
