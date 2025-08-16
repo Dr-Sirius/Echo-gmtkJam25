@@ -24,7 +24,7 @@ DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/bulk_mesh_collision_shape_exporter/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sk_fly_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/array_modifier/plugin.cfg", "res://addons/bulk_mesh_collision_shape_exporter/plugin.cfg", "res://addons/csg_toolkit/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sk_fly_camera/plugin.cfg")
 
 [input]
 
@@ -56,6 +56,11 @@ move_sprint={
 jump={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
+stop_loop={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"location":0,"echo":false,"script":null)
 ]
 }
 

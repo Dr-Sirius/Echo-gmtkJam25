@@ -8,6 +8,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g1dw6"]
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("head", "camera")]
+platform_on_leave = 1
 script = ExtResource("1_3vyb7")
 jumps = 2
 jump_height = 5.0

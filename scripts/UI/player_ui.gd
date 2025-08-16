@@ -46,12 +46,14 @@ func _process(delta: float) -> void:
 	
 
 func pause():
+	get_tree().paused = true
 	paused = true
 	timer_info.hide()
 	loop_info.hide()
 	Pause_Menu.show()
 
 func resume():
+	get_tree().paused = false
 	paused = false
 	timer_info.show()
 	loop_info.show()

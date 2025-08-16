@@ -29,7 +29,8 @@ func _ready() -> void:
 		#light.light_color = enabled_light_color
 		
 func on_timeout():
-	isDisabled = disabled		
+	isDisabled = disabled
+	
 		
 func on_entity_signal_true():
 	print(name + " is not disabled")
@@ -46,9 +47,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if !isDisabled and (body is Echo or body.name == "Player"):
 		connected.emit()
 		light.light_color = default_light_color
+		print(body,self.name)
 
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if !isDisabled and (body is Echo or body.name == "Player"):
 		disconnected.emit()
 		light.light_color = enabled_light_color
+		print(body,self.name)

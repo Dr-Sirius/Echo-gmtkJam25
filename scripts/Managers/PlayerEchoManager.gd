@@ -42,7 +42,10 @@ func _physics_process(delta: float) -> void:
 			
 			
 		elif !timer.is_stopped() and current_echo != null:
-			
+			if Input.is_action_just_pressed("stop_loop"):
+				
+				timer.stop()
+				
 			current_echo.pos.append(player.global_position)
 			current_echo.rot.append(player.global_rotation)
 			current_echo.velocity.append(player.velocity)

@@ -1,34 +1,53 @@
 extends Node
 
 
-var levels: Array[LevelSectionInfo]
+var levels_sections: Array[LevelSectionInfo]
 var current_section: LevelSectionInfo
 var current_level: PackedScene
+var current_level_index: int
 
-
-signal level_change(next_in_line:bool,level_index:int)
+signal level_change_by_idx(section:String, level_idx: int)
+signal next_level
 
 func _init() -> void:
-
-	level_change.connect(change_level)
 	
+	level_change_by_idx.connect(change_level_by_idx)
+	next_level.connect(chnage_to_next_level)
+	levels_sections = get_file_paths_by_extension("res://scenes/Levels/","tres",false)
+	current_section = levels_sections[0]
+	current_level = current_section.levels[0]
+	current_level_index = 0
 	
-	
-
-
-func change_level(next:bool,  level_id: String):
+func change_level_by_idx(section: String, level_idx:int):
 	print("changing")
+	current_level_index = level_idx
 	
-	#if next and current_level_n < len(levels["Fracture"].keys()):
-		#current_level_n += 1
-		#
-		#get_tree().change_scene_to_packed(levels[current_level])
-	#elif !next:
-		#current_level = level_id
-		#get_tree().change_scene_to_packed(levels[level_id])
+	if current_section.section_name == section:
+		current_level = current_section.levels[level_idx]
+		get_tree().change_scene_to_packed(current_section.levels[level_idx])
+		return
+	
+	for i in levels_sections:
+		if i.section_name == section:
+			current_section = i
+	
+	current_level = current_section.levels[level_idx]
+	
+func chnage_to_next_level():
+	
+	if current_level_index + 1 >  len(current_section.levels):
+		for i in range(len(levels_sections)):
+			if levels_sections[i].section_name == current_section.section_name:
+				if len(levels_sections) - 1 == i:
+					change_level_by_idx("Fracture",0)
+				else:
+					change_level_by_idx(levels_sections[i+1].section_name,0)
+	else:
+		current_level_index+=1
+		change_level_by_idx(current_section.section_name,current_level_index)	
 
 # pulled from https://www.reddit.com/r/godot/comments/k1t53k/getting_tscn_children_from_levels_folder/
-func get_file_paths_by_extension(dir_path: String, extension: String, recursive: bool = true) -> Array:
+func get_file_paths_by_extension(dir_path: String, extension: String, recursive: bool = true) -> Array[LevelSectionInfo]:
 	var dir := DirAccess.open(dir_path)
 	if dir == null:
 		printerr("Warning: Could not open: ", dir_path)
@@ -38,7 +57,7 @@ func get_file_paths_by_extension(dir_path: String, extension: String, recursive:
 		printerr("Warning: Could not list contents of: ", dir_path)
 		return []
 	
-	var file_paths: Array = []
+	var file_paths: Array[LevelSectionInfo] = []
 	var file_name: String = dir.get_next()
 	
 	while file_name != "":
@@ -68,9 +87,9 @@ func start():
 	print(save)
 	if !save.is_empty():
 		print("loading level")
-		change_level(false,save["level"])
+		change_level_by_idx(save["section"],save["level_idx"])
 	else:
-		change_level(false,0)
+		change_level_by_idx("Fracture",0)
 	
 func load_game() -> Dictionary:
 	if not FileAccess.file_exists("user://savegame.save"):

@@ -9,6 +9,7 @@ class_name Echo extends CharacterBody3D
 func _ready() -> void:
 	if echo_data != null:
 		isReplaying = true
+	
 
 func _physics_process(delta: float) -> void:
 	
@@ -24,11 +25,14 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 		get_child(1).disabled = true
 		visible = false
-		#isReplaying = false
+		
 		echo_data.iteration = 0
 		
 func replay_echo():
 	if echo_data.iteration == len(echo_data.pos):
+		if !timer.is_stopped():
+			velocity = Vector3.ZERO
+			return
 		print("end replay")
 		echo_data.iteration = 0
 		isReplaying = false

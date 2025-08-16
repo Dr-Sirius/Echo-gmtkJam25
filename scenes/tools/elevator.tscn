@@ -1,11 +1,65 @@
-[gd_scene load_steps=14 format=4 uid="uid://dduymt6xdpe42"]
+[gd_scene load_steps=22 format=4 uid="uid://dduymt6xdpe42"]
 
-[ext_resource type="PackedScene" uid="uid://dso1sporyuegt" path="res://assets/libraries/platforms/Platform_DarkPlates.tscn" id="1_dj0gs"]
+[ext_resource type="Script" uid="uid://d07rqqv6u58ix" path="res://scripts/Entities/ElevatorEntity.gd" id="1_om4em"]
+[ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="2_o78dj"]
 [ext_resource type="PackedScene" uid="uid://sk5wbpswg37k" path="res://assets/libraries/platforms/Door_Frame_Square_Blocked.tscn" id="2_vgp8m"]
+[ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="3_hn6jt"]
 [ext_resource type="PackedScene" uid="uid://d2d3615ko3opy" path="res://assets/libraries/props/Prop_Computer.tscn" id="3_w05wd"]
 [ext_resource type="Texture2D" uid="uid://cm0ktntyjq0sx" path="res://Textures/T_Trim_03_BaseColor.png" id="4_w05wd"]
 [ext_resource type="Texture2D" uid="uid://bjefbsn6qyvne" path="res://Textures/T_Trim_02_BaseColor_Red.png" id="5_om4em"]
+[ext_resource type="Script" uid="uid://c3db8dnsmeh3s" path="res://scripts/Entities/SensorEntity.gd" id="5_yhmwi"]
 [ext_resource type="Texture2D" uid="uid://cxbeavbkvvi2i" path="res://Textures/T_Trim_03_Cables.png" id="6_yhmwi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6nqyk"]
+resource_name = "MI_Trim_01"
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_o78dj")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
+normal_enabled = true
+normal_scale = 0.0
+normal_texture = ExtResource("3_hn6jt")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f681f"]
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"format": 34359742465,
+"index_count": 48,
+"index_data": PackedByteArray("DAANAAAAAAABAAwABAAMAAEAAQAFAAQAAgAMAAQABAAGAAIADQAMAAIAAgAIAA0ADQAIAAcAAAANAA4ABwAOAA0ADgADAAAACQAOAAcAAwAOAAkABwALAAkACQAKAAMA"),
+"lods": [2.47452e-06, PackedByteArray("AAABAAIAAAACAAMABAACAAEAAQAFAAQABAAGAAIABwADAAIAAgAIAAcACQADAAcACQAKAAMABwALAAkA")],
+"name": "MI_Trim_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 15,
+"vertex_data": PackedByteArray("AAAAAAXXo7wAAAAAP1PBuwjXo7wAAAAAc1PBuwzXozwAAAAAP1PBOwjXo7wAAAAACtejvI/CdbIAAAAABNejvA3Xo7wAAAAAEdejvAjXozwAAAAAc1PBOwzXozwAAAAAAAAAAA3XozwAAAAACtejPI/CdbIAAAAABNejPA3Xo7wAAAAAEdejPAjXozwAAAAAWlPBuwrXo7EAAAAAAAAAAAAAAAAAAAAAWlPBOwrXo7EAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jkh2w"]
+resource_name = "Plane_192"
+_surfaces = [{
+"aabb": AABB(-0.02, -0.02, 0, 0.04, 0.04, 1e-05),
+"attribute_data": PackedByteArray("9I8VPhSXNj/wjxU+6wUWP1XUVz/iBRY/8I8VPj0oVz9V1Fc/RihXP1bUVz8UlzY/AAAAP5MSBz8hB3o/kxIHPyEHej/VH2c/ABy/PNQfZz8AHL88khIHPwAAAD/UH2c/ABy/PJMSBz8hB3o/khIHPwAcvzzWH2c/IQd6P9QfZz9MOP0+5gUWP044/T4UlzY/TDj9PkIoVz8AAAA/1R9nPwAAAD+SEgc/"),
+"format": 34359742487,
+"index_count": 48,
+"index_data": PackedByteArray("EAARAAAAAAABABAAEQAQAAIAAgAFABEAEQAFAAQABAASABEAAAARABIAEgADAAAACAATAAYABgAHAAgABgATAAkACQAKAAYACwAUAA0ADQAPAAsADAAUAAsACwAOAAwA"),
+"lods": [2.47452e-06, PackedByteArray("AAABAAIAAAACAAMABAADAAIAAgAFAAQABgAHAAgABgAIAAkACQAKAAYACwAMAA0ACwAOAAwADQAPAAsA")],
+"material": SubResource("StandardMaterial3D_6nqyk"),
+"name": "MI_Trim_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 21,
+"vertex_data": PackedByteArray("AAAAAAXXo7wAAAAAP1PBuwjXo7wAAAAAc1PBuwzXozwAAAAAP1PBOwjXo7wAAAAAc1PBOwzXozwAAAAAAAAAAA3XozwAAAAACtejvI/CdbIAAAAAEdejvAjXozwAAAAAc1PBuwzXozwAAAAAP1PBuwjXo7wAAAAABNejvA3Xo7wAAAAACtejPI/CdbIAAAAAP1PBOwjXo7wAAAAAc1PBOwzXozwAAAAABNejPA3Xo7wAAAAAEdejPAjXozwAAAAAWlPBuwrXo7EAAAAAAAAAAAAAAAAAAAAAWlPBOwrXo7EAAAAAWlPBuwrXo7EAAAAAWlPBOwrXo7EAAAAA/3//f/9/////f/9//3////9//3//f////3//f/9/////f/9//3////9//3//f////3//f/9//v//f/9//3/+//9//3//f/7//3//f/9//v//f/9//3/+//9//3//f/7//3//f/9//v//f/9//3/+//9//3//f/7//3//f/9//v//f/9//3////9//3//f////3//f/9/////f/9//3/+//9//3//f/7/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f681f")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m3dn0"]
+points = PackedVector3Array(0.00589664, 0.02, 0, 0.02, 0.0199961, 0, -0.00590055, 0.02, 0, 0.0199961, -0.02, 0, -0.02, 0.0199961, 0, -0.02, -0.02, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o78dj"]
+size = Vector3(3, 1, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o78dj"]
 resource_name = "M_Glass"
@@ -146,9 +200,27 @@ shadow_mesh = SubResource("ArrayMesh_hn6jt")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0inrb"]
 points = PackedVector3Array(-0.02, -0.02, -3.89758e-07, -0.010971, -0.0144244, -0.00413307, -0.010924, -0.0146241, -0.00413307, -0.0108066, -0.0147964, -0.00413307, -0.0101566, -0.0154033, -0.00413307, -0.00996867, -0.0155129, -0.00413307, -0.00975724, -0.0155599, -0.00413307, 0.0199961, -0.02, -3.89758e-07, -0.0144244, 0.02, 1.49012e-08, -0.02, 0.02, -3.89758e-07, -0.010971, 0.0144205, -0.00413307, 0.00975333, -0.0155599, -0.00413307, 0.00996476, -0.0155129, -0.00413307, 0.0101527, -0.0154033, -0.00413307, 0.0108027, -0.0147964, -0.00413307, 0.0109201, -0.0146241, -0.00413307, 0.0109671, -0.0144244, -0.00413307, 0.0199961, 0.02, -3.89758e-07, -0.00975724, 0.015556, -0.00413307, -0.00996867, 0.015509, -0.00413307, -0.0101566, 0.0153994, -0.00413307, -0.0108066, 0.0147925, -0.00413307, -0.010924, 0.0146202, -0.00413307, 0.0109671, 0.0144205, -0.00413307, 0.0109201, 0.0146202, -0.00413307, 0.0108027, 0.0147925, -0.00413307, 0.0101527, 0.0153994, -0.00413307, 0.00996476, 0.015509, -0.00413307, 0.00975333, 0.015556, -0.00413307)
 
-[node name="Elevator" type="Node3D"]
+[node name="Elevator" type="CharacterBody3D" node_paths=PackedStringArray("entity")]
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_om4em")
+entity = NodePath("Prop_Computer")
 
-[node name="Platform_DarkPlates" parent="." instance=ExtResource("1_dj0gs")]
+[node name="Platform_DarkPlates" type="Node3D" parent="."]
+
+[node name="Platform_DarkPlates" type="Node3D" parent="Platform_DarkPlates"]
+
+[node name="Platform_DarkPlates" type="MeshInstance3D" parent="Platform_DarkPlates/Platform_DarkPlates"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_jkh2w")
+skeleton = NodePath("")
+
+[node name="Platform_DarkPlates_col" type="CharacterBody3D" parent="Platform_DarkPlates/Platform_DarkPlates/Platform_DarkPlates"]
+motion_mode = 1
+platform_on_leave = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Platform_DarkPlates/Platform_DarkPlates/Platform_DarkPlates/Platform_DarkPlates_col"]
+shape = SubResource("ConvexPolygonShape3D_m3dn0")
 
 [node name="Door_Frame_Square_Blocked" parent="." instance=ExtResource("2_vgp8m")]
 transform = Transform3D(-3.54062e-08, 0, -1, 0, 1, 0, 0.81, 0, -4.37114e-08, 2, 0, 0.1222)
@@ -159,8 +231,26 @@ transform = Transform3D(-3.54062e-08, 0, -1, 0, 1, 0, 0.81, 0, -4.37114e-08, -2,
 [node name="Door_Frame_Square_Blocked3" parent="." instance=ExtResource("2_vgp8m")]
 transform = Transform3D(0.81, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.1222)
 
-[node name="Prop_Computer" parent="." instance=ExtResource("3_w05wd")]
+[node name="Prop_Computer" parent="." node_paths=PackedStringArray("light", "area") instance=ExtResource("3_w05wd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.43417, 0, 0)
+script = ExtResource("5_yhmwi")
+disabled = false
+light = NodePath("OmniLight3D")
+enabled_light_color = Color(0.776676, 0, 0.138735, 1)
+area = NodePath("Area3D")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Prop_Computer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.54547, 0.123061)
+light_color = Color(1, 0, 0, 1)
+light_energy = 7.098
+omni_range = 0.410011
+omni_attenuation = 10.0
+
+[node name="Area3D" type="Area3D" parent="Prop_Computer"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Prop_Computer/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1.5)
+shape = SubResource("BoxShape3D_o78dj")
 
 [node name="Platform_Window_Wide" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 5, 0)
