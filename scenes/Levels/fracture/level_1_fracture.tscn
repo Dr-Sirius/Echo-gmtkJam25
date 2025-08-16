@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="26_yjj07"]
 [ext_resource type="PackedScene" uid="uid://dduymt6xdpe42" path="res://scenes/tools/elevator.tscn" id="27_yjj07"]
 [ext_resource type="PackedScene" uid="uid://btql6xymbh4a0" path="res://assets/libraries/props/Prop_Crate4.tscn" id="28_doshn"]
-[ext_resource type="VoxelGIData" uid="uid://bl7pnw7boaa65" path="res://level_1_fracture.VoxelGI_data.res" id="29_ofr5k"]
+[ext_resource type="VoxelGIData" uid="uid://bl7pnw7boaa65" path="res://assets/level_1_fracture.VoxelGI_data.res" id="29_ofr5k"]
 [ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="32_o7rch"]
 [ext_resource type="PackedScene" uid="uid://d2d3615ko3opy" path="res://assets/libraries/props/Prop_Computer.tscn" id="34_1etwn"]
 [ext_resource type="Script" uid="uid://cnijbs33wb3tl" path="res://scripts/Entities/LightEntity.gd" id="35_1v6uy"]
