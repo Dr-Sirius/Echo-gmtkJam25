@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq04nqq0y4wd3"]
+
+[ext_resource type="Script" uid="uid://baxmsbwxpym1l" path="res://pause_timer.gd" id="1_wa1au"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8vp8"]
+size = Vector3(3.75, 3, 4.5)
+
+[node name="Pauser" type="Area3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_wa1au")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0321655, -0.25, 0.25)
+shape = SubResource("BoxShape3D_c8vp8")

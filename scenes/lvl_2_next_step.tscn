@@ -1,16 +1,16 @@
 [gd_scene load_steps=17 format=3 uid="uid://b7566n70tdjea"]
 
-[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_3xi4u"]
-[ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_epk12"]
-[ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="2_l5wbu"]
-[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="3_3t3qm"]
-[ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="3_epk12"]
-[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/Managers/level_end.gd" id="3_xch5h"]
-[ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="4_be1rn"]
-[ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="4_npgfc"]
-[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="5_yj7mw"]
-[ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="6_xch5h"]
-[ext_resource type="Script" uid="uid://cs7wv6qnliq8t" path="res://scripts/Entities/WallEntity.gd" id="7_yg42c"]
+[ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_ppi5i"]
+[ext_resource type="Material" uid="uid://c4urka6ybrmhm" path="res://addons/kenney_prototype_tools/materials/dark/material_13.tres" id="2_2r0m0"]
+[ext_resource type="Script" uid="uid://1xo4b5gfvlwl" path="res://scripts/Managers/level_end.gd" id="3_5ffkr"]
+[ext_resource type="Material" uid="uid://d0gmvf62uyhd0" path="res://addons/kenney_prototype_tools/materials/red/material_01.tres" id="4_jiud3"]
+[ext_resource type="Script" uid="uid://2n4fkoqn8omc" path="res://scripts/Entities/ButtonEntity.gd" id="5_e4cqa"]
+[ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="6_2utve"]
+[ext_resource type="Material" uid="uid://8ylcw0h1lkhg" path="res://addons/kenney_prototype_tools/materials/orange/material_01.tres" id="7_2t54p"]
+[ext_resource type="Script" uid="uid://cs7wv6qnliq8t" path="res://scripts/Entities/WallEntity.gd" id="8_p3hir"]
+[ext_resource type="PackedScene" uid="uid://b857t6xjf54qe" path="res://scenes/tools/static_chamber.tscn" id="9_cw0xk"]
+[ext_resource type="Material" uid="uid://ddal25jay8fq1" path="res://addons/kenney_prototype_tools/materials/purple/material_01.tres" id="10_uwpoq"]
+[ext_resource type="PackedScene" uid="uid://c6y8kgf8xcp2" path="res://scenes/Entities/player.tscn" id="11_wxes3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3xi4u"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -32,7 +32,7 @@ size = Vector3(3.94727, 4.5332, 5.67716)
 size = Vector3(0.862305, 0.37915, 0.75)
 
 [node name="Lvl2NextStep" type="Node3D" node_paths=PackedStringArray("timer", "player")]
-script = ExtResource("1_3xi4u")
+script = ExtResource("1_ppi5i")
 timer = NodePath("Timer")
 player = NodePath("Player")
 
@@ -47,25 +47,25 @@ environment = SubResource("Environment_epk12")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.241699, -5.93723)
-material_override = ExtResource("2_epk12")
+material_override = ExtResource("2_2r0m0")
 use_collision = true
 size = Vector3(3.3125, 0.516602, 17.5268)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.291856, -19.3008)
-material_override = ExtResource("2_epk12")
+material_override = ExtResource("2_2r0m0")
 use_collision = true
 size = Vector3(3.34937, 1.31589, 9.33063)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71582, -30.421)
-material_override = ExtResource("2_epk12")
+material_override = ExtResource("2_2r0m0")
 use_collision = true
 size = Vector3(3.40649, 4.16382, 13.8528)
 
 [node name="Level End" type="Area3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241876, 7.1365, -50.2748)
-script = ExtResource("3_xch5h")
+script = ExtResource("3_5ffkr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Geometry/Level End"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98123, -2.09218)
@@ -73,15 +73,15 @@ shape = SubResource("BoxShape3D_yg42c")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.92521, -46.0509)
-material_override = ExtResource("2_epk12")
+material_override = ExtResource("2_2r0m0")
 use_collision = true
 size = Vector3(3.36035, 4.07715, 17.9956)
 
 [node name="floor_button_red" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.79934, -36.6612)
-material_override = ExtResource("3_3t3qm")
+material_override = ExtResource("4_jiud3")
 size = Vector3(1.04321, 0.233643, 0.928711)
-script = ExtResource("4_npgfc")
+script = ExtResource("5_e4cqa")
 
 [node name="Area3D" type="Area3D" parent="Geometry/floor_button_red"]
 
@@ -90,7 +90,7 @@ shape = SubResource("BoxShape3D_twbyr")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.06699, -47.7993)
-material_override = ExtResource("5_yj7mw")
+material_override = ExtResource("6_2utve")
 use_collision = true
 size = Vector3(6.00562, 13.3845, 1)
 
@@ -101,14 +101,14 @@ size = Vector3(2.04004, 3.5752, 1.67871)
 
 [node name="wall_door_big" type="CSGBox3D" parent="Geometry" node_paths=PackedStringArray("entity", "timer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.64957, -47.7993)
-material_override = ExtResource("6_xch5h")
+material_override = ExtResource("7_2t54p")
 use_collision = true
 size = Vector3(2.04004, 3.7948, 0.286865)
-script = ExtResource("7_yg42c")
+script = ExtResource("8_p3hir")
 entity = NodePath("../floor_button_red")
 timer = NodePath("../../Timer")
 
-[node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("2_l5wbu")]
+[node name="Static Chamber" parent="." node_paths=PackedStringArray("timer", "player") instance=ExtResource("9_cw0xk")]
 timer = NodePath("../Timer")
 player = NodePath("../Player")
 
@@ -117,9 +117,9 @@ transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
 transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("4_be1rn")
+material_override = ExtResource("10_uwpoq")
 
-[node name="Player" parent="." instance=ExtResource("3_epk12")]
+[node name="Player" parent="." instance=ExtResource("11_wxes3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34268, 0.113878)
 
 [node name="Timer" type="Timer" parent="."]

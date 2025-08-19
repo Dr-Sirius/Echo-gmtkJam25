@@ -470,6 +470,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 103, 24)
 [node name="Elevator" parent="Geometry" node_paths=PackedStringArray("timer") instance=ExtResource("27_yjj07")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 26.105)
 timer = NodePath("../../Timer")
+pos_change = Vector3(0, 100, 0)
 
 [node name="VoxelGI" type="VoxelGI" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 20)
@@ -5175,6 +5176,9 @@ transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25
 
 [node name="Platform_CenterPlate" parent="Geometry/platforms" instance=ExtResource("1_pt0fy")]
 
+[node name="Platform_CenterPlate4" parent="Geometry/platforms" instance=ExtResource("1_pt0fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
 [node name="Platform_CenterPlate2" parent="Geometry/platforms" instance=ExtResource("1_pt0fy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
@@ -5222,12 +5226,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0811994, 0.945038, -1.1487
 
 [node name="CollisionShape3D" parent="Static Chamber/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.218811, 0, -0.67003)
-
-[node name="CSGBakedCollisionShape3D" parent="Static Chamber" index="2"]
-transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965)
-
-[node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
-transform = Transform3D(0.595, 0, 0, 0, 1, 0, 0, 0, 0.59, 0.976695, 0, -0.937965)
 
 [node name="floor_button" parent="." instance=ExtResource("36_3m8x6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.61295, 0.0600586, 4.65088)

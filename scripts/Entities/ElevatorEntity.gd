@@ -6,6 +6,7 @@ class_name ElevatorEntity extends Entity
 @export var quit: bool = false
 @export var entity: Entity
 @export var timer: Timer
+@export var pos_change: Vector3
 var okey_dokey: bool = false
 
 func _ready() -> void:
@@ -16,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		print(global_position)
 		var tween = get_tree().create_tween()
 	
-		var pos = Vector3(global_position.x,global_position.y + 100,global_position.z)
+		var pos = global_position+pos_change
 		tween.tween_property(self,"global_position",pos,10).set_trans(Tween.TRANS_QUAD)
 		
 		print("move True")

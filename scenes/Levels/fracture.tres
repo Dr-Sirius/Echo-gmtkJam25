@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1gbr56kldxjf" path="res://scripts/level_section_info.gd" id="1_a03fl"]
 [ext_resource type="PackedScene" uid="uid://bifrbsedvf1bd" path="res://scenes/Levels/fracture/level_1_fracture.tscn" id="1_qhbnu"]
-[ext_resource type="PackedScene" uid="uid://b7566n70tdjea" path="res://scenes/Levels/fracture/lvl_2_next_step.tscn" id="2_f5t3x"]
+[ext_resource type="PackedScene" uid="uid://dlsfd0v3dgo4p" path="res://scenes/Levels/fracture/level_2_watch_your_step.tscn" id="2_f5t3x"]
 [ext_resource type="PackedScene" uid="uid://bq5skxw432iih" path="res://scenes/Levels/fracture/lvl_3_order_of_operations.tscn" id="3_rd37i"]
 
 [resource]
