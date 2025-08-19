@@ -4,14 +4,16 @@ class_name WallEntity extends Entity
 @export var timer: Timer
 @export var pos_change: Vector3 = Vector3(0,3,0)
 @export var tween_out: bool = false
+@export var tween_speed: float = 0.4
 @export var on: bool = false
+@export var once: bool = false
+
 var default_pos: Vector3
 
 
 func _ready() -> void:
 	default_pos = position
 	if on:
-		
 		on_entity_signal_true()
 	if entity != null:
 		entity.connected.connect(on_entity_signal_true)
@@ -22,13 +24,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if timer:
-		if timer.is_stopped() and !on:
+		if timer.is_stopped() and !on and !once:
 			position = default_pos
 
 func on_entity_signal_true():
 	var tween = get_tree().create_tween()
 	var pos = position + pos_change
-	tween.tween_property(self,"position",pos,0.4)
+	tween.tween_property(self,"position",pos,tween_speed)
 	
 		
 	
@@ -36,7 +38,7 @@ func on_entity_signal_false():
 	if tween_out:
 		var tween = get_tree().create_tween()
 		
-		tween.tween_property(self,"position",default_pos,0.4)
+		tween.tween_property(self,"position",default_pos,tween_speed)
 	else:
 		position = default_pos
 	disconnected.emit()

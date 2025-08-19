@@ -17,13 +17,14 @@ func _physics_process(delta: float) -> void:
 		
 		visible = true
 		get_child(1).disabled = false
-		
+		get_child(2).disabled = false
 		replay_echo()
 		move_and_slide()
 	else:
 		global_position = echo_data.pos[0]
 		velocity = Vector3.ZERO
 		get_child(1).disabled = true
+		get_child(2).disabled = true
 		visible = false
 		
 		echo_data.iteration = 0
