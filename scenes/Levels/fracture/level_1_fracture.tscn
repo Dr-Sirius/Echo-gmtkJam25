@@ -402,7 +402,7 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 5, 
 script = ExtResource("6_smjm4")
 entity = NodePath("../../../sensor_wall")
 timer = NodePath("../../../Timer")
-up_y = -3.0
+pos_change = Vector3(0, -3, 0)
 
 [node name="Door_DarkMetal2" parent="Geometry/Misc" node_paths=PackedStringArray("entity", "timer") instance=ExtResource("16_smjm4")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -2, 5, 24)
@@ -415,14 +415,12 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 2, 3, 
 script = ExtResource("6_smjm4")
 entity = NodePath("../../Elevator")
 timer = NodePath("../../../Timer")
-up_y = 2.0
 
 [node name="Door_DarkMetal6" parent="Geometry/Misc" node_paths=PackedStringArray("entity", "timer") instance=ExtResource("16_smjm4")]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, -2, 7, 24)
 script = ExtResource("6_smjm4")
 entity = NodePath("../../Elevator")
 timer = NodePath("../../../Timer")
-up_y = -2.0
 
 [node name="TopAstra_Corner_Round_Inner" parent="Geometry/Misc" instance=ExtResource("18_7qy5j")]
 transform = Transform3D(-4.37114e-08, -4.37114e-08, 1, -1, 1.91069e-15, -4.37114e-08, 0, -1, -4.37114e-08, -2, 8, 21)

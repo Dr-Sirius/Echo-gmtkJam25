@@ -44,8 +44,8 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(560, 480)
 layout_mode = 2
-input_action_names = Array[StringName]([&"move_forward", &"move_back", &"move_left", &"move_right", &"jump"])
-readable_action_names = Array[String](["Move Forward", "Move Back", "Move Left", "Move Right", "Jump"])
+input_action_names = Array[StringName]([&"move_forward", &"move_back", &"move_left", &"move_right", &"jump", &"stop_loop"])
+readable_action_names = Array[String](["Move Forward", "Move Back", "Move Left", "Move Right", "Jump", "Stop Loop"])
 show_all_actions = false
 input_icon_mapper = NodePath("../../../InputIconMapper")
 action_name_map = {
@@ -53,7 +53,8 @@ action_name_map = {
 &"move_back": "Move Back",
 &"move_forward": "Move Forward",
 &"move_left": "Move Left",
-&"move_right": "Move Right"
+&"move_right": "Move Right",
+&"stop_loop": "Stop Loop"
 }
 
 [node name="InputActionsTree" parent="VBoxContainer/InputMappingContainer" node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("5_b2whh")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bn8kkwju77c8j"]
+[gd_scene load_steps=8 format=4 uid="uid://bn8kkwju77c8j"]
 
 [ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="1_nuuka"]
 [ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="2_y1s4k"]
@@ -48,8 +48,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cu5hq")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ka002"]
-points = PackedVector3Array(0.0242187, 0.00253425, 0.05, -0.0242187, 0.00253425, 0.05, 0.0242187, -0.00253425, 0.05, 0.0242187, 0.00253425, -1.75166e-06, -0.0242187, -0.00253425, 0.05, -0.0242187, 0.00253425, -1.75166e-06, 0.0242187, -0.00253425, -1.75166e-06, 0.0129581, 0.00201182, -0.000134252, -0.0242187, -0.00253425, -1.75166e-06, -0.0129628, 0.00201182, -0.000134252, 0.0129581, -0.00201231, -0.000134252, -0.0129628, -0.00201231, -0.000134252)
+[sub_resource type="BoxShape3D" id="BoxShape3D_nuuka"]
+size = Vector3(0.0090332, 0.00585938, 0.0491455)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y1s4k"]
+size = Vector3(0.00684766, 0.00585938, 0.0491455)
 
 [node name="Door_Frame_SquareTall" type="Node3D"]
 
@@ -63,4 +66,13 @@ skeleton = NodePath("")
 [node name="Door_Frame_SquareTall_col" type="StaticBody3D" parent="Door_Frame_SquareTall/Door_Frame_SquareTall"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door_Frame_SquareTall/Door_Frame_SquareTall/Door_Frame_SquareTall_col"]
-shape = SubResource("ConvexPolygonShape3D_ka002")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0196533, 0, 0.0254272)
+shape = SubResource("BoxShape3D_nuuka")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Door_Frame_SquareTall/Door_Frame_SquareTall/Door_Frame_SquareTall_col"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0185425, 0, 0.0254272)
+shape = SubResource("BoxShape3D_nuuka")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Door_Frame_SquareTall/Door_Frame_SquareTall/Door_Frame_SquareTall_col"]
+transform = Transform3D(0.00364772, 1.19208e-07, -0.999993, -1.19208e-07, 1, 1.18774e-07, 0.999993, 1.18774e-07, 0.00364772, 0.000565779, 5.9064e-10, 0.0458998)
+shape = SubResource("BoxShape3D_y1s4k")
