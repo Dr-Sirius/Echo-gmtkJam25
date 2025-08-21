@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://bfqe5encsy7s7"]
+[gd_scene load_steps=6 format=4 uid="uid://bfqe5encsy7s7"]
 
 [ext_resource type="Texture2D" uid="uid://cv5nh0her4y87" path="res://Textures/T_Trim_01_BaseColor_Red.png" id="1_tv1w4"]
 [ext_resource type="Texture2D" uid="uid://dtmnrdxt5u4rq" path="res://Textures/T_Trim_01_Normal.png" id="2_l81mk"]
@@ -46,9 +46,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pifhs")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bsowa"]
-points = PackedVector3Array(-0.02, -0.02, 0.0200185, -0.02, -0.02, 1.76357e-05, -0.02, 0, 0.0199989, -0.02, 0.02, 0.0200166, -0.02, 0.02, 1.76357e-05, -0.02, 0, 5.29249e-18)
-
 [node name="ShortWall_DarkMetal2_Straight" type="Node3D"]
 
 [node name="ShortWall_DarkMetal2_Straight" type="Node3D" parent="."]
@@ -59,6 +56,3 @@ mesh = SubResource("ArrayMesh_wrcxj")
 skeleton = NodePath("")
 
 [node name="ShortWall_DarkMetal2_Straight_col" type="StaticBody3D" parent="ShortWall_DarkMetal2_Straight/ShortWall_DarkMetal2_Straight"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ShortWall_DarkMetal2_Straight/ShortWall_DarkMetal2_Straight/ShortWall_DarkMetal2_Straight_col"]
-shape = SubResource("ConvexPolygonShape3D_bsowa")

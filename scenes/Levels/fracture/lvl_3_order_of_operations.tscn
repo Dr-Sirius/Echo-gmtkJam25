@@ -246,13 +246,6 @@ omni_range = 0.555661
 timer = NodePath("../Timer")
 player = NodePath("../Player")
 
-[node name="CSGBakedCollisionShape3D" parent="Static Chamber" index="2"]
-transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="CSGBakedMeshInstance3D" parent="Static Chamber" index="3"]
-transform = Transform3D(0.52, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-material_override = ExtResource("10_mr2ub")
-
 [node name="Player" parent="." instance=ExtResource("11_2rpuy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34268, 0.113878)
 

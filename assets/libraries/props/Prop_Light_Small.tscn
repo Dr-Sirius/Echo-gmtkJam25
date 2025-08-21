@@ -19,6 +19,7 @@ resource_name = "M_Light"
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 emission_enabled = true
+emission = Color(1, 1, 1, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_f5svv"]
 _surfaces = [{
@@ -94,3 +95,7 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Prop_Light_Small/Prop_Light_Small/Prop_Light_Small_col"]
 shape = SubResource("ConvexPolygonShape3D_twvg1")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shadow_enabled = true

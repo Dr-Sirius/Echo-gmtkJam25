@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://bifrbsedvf1bd"]
+[gd_scene load_steps=67 format=4 uid="uid://bifrbsedvf1bd"]
 
 [ext_resource type="Script" uid="uid://8ysjdhpswr3w" path="res://scripts/Managers/PlayerEchoManager.gd" id="1_lto7i"]
 [ext_resource type="PackedScene" uid="uid://i0kbrj2158cq" path="res://assets/libraries/platforms/Platform_CenterPlate.tscn" id="1_pt0fy"]
@@ -39,6 +39,20 @@
 [ext_resource type="Script" uid="uid://cnijbs33wb3tl" path="res://scripts/Entities/LightEntity.gd" id="35_1v6uy"]
 [ext_resource type="PackedScene" uid="uid://b7m0k3d7xxvx0" path="res://scenes/Entities/floor_button.tscn" id="36_3m8x6"]
 [ext_resource type="PackedScene" uid="uid://buy6huk2os7kx" path="res://scenes/Entities/wall_sensor.tscn" id="37_3m8x6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vpnnj"]
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_vpnnj"]
+sky_material = SubResource("ProceduralSkyMaterial_vpnnj")
+
+[sub_resource type="Environment" id="Environment_o7rch"]
+background_mode = 2
+sky = SubResource("Sky_vpnnj")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t6x22"]
 resource_name = "MI_Trim_01"
@@ -333,7 +347,7 @@ normal_enabled = true
 normal_scale = 0.0
 normal_texture = ExtResource("13_1v6uy")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s25ok"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_io1ui"]
 _surfaces = [{
 "aabb": AABB(-0.0242672, -0.00253425, 0, 0.0485345, 0.00506849, 0.05),
 "format": 34359742465,
@@ -364,7 +378,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray("HMzGvJoVJjvMzEw9AAAAAJoVJjvMzEw9AAAAAAAAAADMzEw9HMzGPJoVJjvMzEw9HMzGvAAAAADMzEw9HMzGPAAAAADMzEw9HMzGvJoVJrvMzEw9HMzGPJoVJrvMzEw9AAAAAJoVJrvMzEw9HMzGvJoVJrvMzEw9HMzGvJoVJrvMzMw8HMzGvAAAAADMzMw8HMzGvJoVJrsAAAAAHMzGvAAAAADMzEw9HMzGvAAAAAAAAAAAHMzGvJoVJjvMzMw8HMzGvJoVJjvMzEw9HMzGvJoVJjsAAAAAAAAAAJoVJjvMzEw9HMzGvJoVJjvMzEw9HMzGvJoVJjvMzMw8AAAAAJoVJjvMzMw8HMzGPJoVJjvMzMw8HMzGPJoVJjvMzEw9AAAAAJoVJjsAAAAAHMzGvJoVJjsAAAAAHMzGPJoVJjsAAAAAAAAAAJoVJrvMzEw9AAAAAJoVJrvMzMw8HMzGvJoVJrvMzMw8HMzGvJoVJrvMzEw9HMzGPJoVJrvMzMw8HMzGPJoVJrvMzEw9AAAAAJoVJrsAAAAAHMzGvJoVJrsAAAAAHMzGPJoVJrsAAAAAHMzGPJoVJrvMzEw9HMzGPAAAAADMzEw9HMzGPAAAAADMzMw8HMzGPJoVJrvMzMw8HMzGPJoVJrsAAAAAHMzGPAAAAAAAAAAAHMzGPJoVJjvMzMw8HMzGPJoVJjvMzEw9HMzGPJoVJjsAAAAAHMzGvJoVJjsAAAAAHMzGvAAAAAAAAAAAAAAAAAAAAAAAAAAAHMzGvJoVJrsAAAAAAAAAAJoVJjsAAAAAAAAAAJoVJrsAAAAAHMzGPJoVJjsAAAAAHMzGPJoVJrsAAAAAHMzGPAAAAAAAAAAA/3//fwAA/7//f/9/////P/9//3////+//3//f////z//f/9/AAD/P/9//3////+//3//fwAA/z//f/9/////v/9//3////+/AAAAgP9//78AAACA//8AAAAAAID/////AAAAgP//AAAAAACA/3//PwAAAID/////AAAAgP////8AAACA/3//PwAAAID/////AID///9//78AgP///3//PwCA////f/8/AID///9//78AgP///3//vwCA////f/+/AID///9//78AgP///3//PwCA////f/+/AIAAAP9//z8AgAAA/3//PwCAAAD/f/+/AIAAAP9//78AgAAA/3//PwCAAAD/f/8/AIAAAP9//z8AgAAA/3//vwCAAAD/f/8///8AgP9//z///wCA/3//v///AID//wAA//8AgP///////wCA////////AID//wAA//8AgP//AAD//wCA/3//v///AID//wAA/////wAA/z//////AAD/v/////////8//////wAA/7//////////v/////////8//////////7//////////P/////////8/")
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_s25ok")
+shadow_mesh = SubResource("ArrayMesh_io1ui")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rfgcf"]
 points = PackedVector3Array(0.0242672, 0.00253425, 0.0499951, -0.0242672, 0.00253425, 0.0499951, 0.0242672, -0.00253425, 0.0499951, 0.0242672, 0.00253425, 0, -0.0242672, -0.00253425, 0.0499951, -0.0242672, 0.00253425, 0, 0.0242672, -0.00253425, 0, -0.0242672, -0.00253425, 0)
@@ -373,6 +387,9 @@ points = PackedVector3Array(0.0242672, 0.00253425, 0.0499951, -0.0242672, 0.0025
 script = ExtResource("1_lto7i")
 timer = NodePath("Timer")
 player = NodePath("Player")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o7rch")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.026177, -0.999657, -4.36964e-08, 0, -4.37114e-08, 1, -0.999657, 0.026177, 1.14423e-09, 0, 33, 6)
@@ -5050,129 +5067,171 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -12, 4
 
 [node name="Platform_DarkPlates45" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates46" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates47" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates48" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates49" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates50" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates51" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, 8)
+visible = false
 
 [node name="Platform_DarkPlates52" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates53" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates54" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates55" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates56" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates57" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates58" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, 4)
+visible = false
 
 [node name="Platform_DarkPlates59" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates60" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates61" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates62" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates63" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates64" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates65" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, 0)
+visible = false
 
 [node name="Platform_DarkPlates66" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates67" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates68" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates69" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates70" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates71" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates72" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, -4)
+visible = false
 
 [node name="Platform_DarkPlates73" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates74" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates75" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates76" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates77" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates78" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates79" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, 12)
+visible = false
 
 [node name="Platform_DarkPlates80" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 12, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates81" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 8, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates82" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 4, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates83" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates84" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -4, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates85" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -8, -25, 16)
+visible = false
 
 [node name="Platform_DarkPlates86" parent="Geometry/platforms" instance=ExtResource("19_l58iv")]
 transform = Transform3D(1, 0, 0, 0, 1, -1.74846e-07, 0, 1.74846e-07, 1, -12, -25, 16)
+visible = false
 
 [node name="Platform_CenterPlate" parent="Geometry/platforms" instance=ExtResource("1_pt0fy")]
 
