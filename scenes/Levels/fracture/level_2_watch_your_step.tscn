@@ -1069,7 +1069,7 @@ transform = Transform3D(-8.01517e-05, 0.365574, -0.0374386, -0.00167494, 6.81192
 transform = Transform3D(-8.01517e-05, 0.365574, -0.0374386, -0.00167494, 6.81192, 0.00228561, 0.0399648, 0.286324, 1.03603e-05, 1.95302, 0.0216533, 0.99211)
 
 [node name="floor_button" parent="Geometry/StaticBody3D6" instance=ExtResource("6_ti1hl")]
-transform = Transform3D(-0.0010379, 0.000837885, -0.624997, 0.00157565, 0.666665, 0.000890974, 0.666664, -0.00157417, -0.00110921, 1.62407, 0.0383241, 0.169465)
+transform = Transform3D(-0.0010379, 0.000837889, -0.624997, 0.00157564, 0.666665, 0.000891004, 0.666664, -0.00157418, -0.00110921, 1.01736, 0.0551381, -0.465157)
 size = Vector3(1.5, 0.0454102, 0.732361)
 
 [node name="Prop_Computer" parent="Geometry/StaticBody3D6" instance=ExtResource("7_7uy4m")]
@@ -3998,7 +3998,7 @@ transform = Transform3D(196.303, -8.74228e-06, -5.3652e-15, 0, 4.37114e-06, -1.4
 shape = SubResource("ConvexPolygonShape3D_q8yhc")
 
 [node name="Prop_Rail_3" parent="Geometry/StaticBody3D8" instance=ExtResource("4_ov5h2")]
-transform = Transform3D(-0.168319, 0.000769682, -0.604751, -0.461243, 0.465919, 0.113352, 0.450964, 0.476826, -0.109783, -1.875, 1.90735e-06, 0.962813)
+transform = Transform3D(-0.209942, -0.376387, -0.476838, -0.372874, 0.506551, -0.207134, 0.511209, 0.214903, -0.346909, -1.92906, 0.0220261, 0.945899)
 
 [node name="Prop_Rail_5" parent="Geometry/StaticBody3D8" instance=ExtResource("4_ov5h2")]
 transform = Transform3D(-0.349757, 0.269616, 0.468206, 0.536142, 0.349404, 0.175169, -0.186184, 0.499668, -0.37513, -1.875, 7.15256e-06, -0.964835)
